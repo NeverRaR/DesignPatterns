@@ -13,22 +13,22 @@ public class StateTest {
                 int i = scanner.nextInt();
                 boolean isEnd = false;
                 switch (i) {
-                    case 0:
+                    case 0: // exit
                         isEnd = true;
                         break;
-                    case 1:
+                    case 1: // Use device
                         device.doUse();
                         break;
-                    case 2:
+                    case 2: // Turn on device
                         device.doOn();
                         break;
-                    case 3:
+                    case 3: // Turn off device
                         device.doOff();
                         break;
-                    case 4:
+                    case 4: // Break down device
                         device.doDown();
                         break;
-                    case 5:
+                    case 5: // fix device
                         device.doFix();
                         break;
                     default:

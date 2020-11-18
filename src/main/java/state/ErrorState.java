@@ -1,6 +1,7 @@
 package state;
 
 public class ErrorState implements State{
+    // singleton
     private static final ErrorState singleton = new ErrorState();
     private ErrorState(){}
     public static State getInstance(){

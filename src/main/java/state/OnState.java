@@ -1,6 +1,7 @@
 package state;
 
 public class OnState implements State{
+    // singleton
     private static final OnState singleton = new OnState();
     private OnState(){}
     public static State getInstance(){
