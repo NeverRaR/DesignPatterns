@@ -1,6 +1,6 @@
 package balking;
 
-public class Main {
+public class BalkingTest {
     public static void main(String[] args) {
         Customer customer=new Customer();
         CustomerThread customerThread=new CustomerThread("custromer",customer);

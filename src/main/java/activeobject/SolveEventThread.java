@@ -18,11 +18,11 @@ public class SolveEventThread extends Thread{
     @Override
     public void run() {
         notifyThread.start();
-        for (int i = 0; i < callCount; i++) {
-            System.out.println(new Date()+" "+Thread.currentThread().getName()+" calls slove event"+i);
+        for (int i = 1; i < callCount+1 ; i++) {
+            System.out.println(new Date() + " " + Thread.currentThread().getName() + " calls slove event" + i);
             Result result = activeObject.solveEvent("Event" + i);
             notifyThread.putResult(result);
         }
-        interrupt();
+        activeObject.kill();
     }
 }
