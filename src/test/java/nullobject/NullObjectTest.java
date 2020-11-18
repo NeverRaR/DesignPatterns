@@ -1,7 +1,10 @@
 package nullobject;
 
+import org.junit.Test;
+
 public class NullObjectTest {
-    public static void main(String[] args) {
+    @Test
+    public  void main() {
         Stub stub = new Stub("0002","0002");
         Stub stub1 = new Stub("0004","0004");
         TicketFinder finder = new TicketFinder();
