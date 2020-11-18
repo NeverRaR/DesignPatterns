@@ -11,7 +11,7 @@ public class DecoratorTest  {
         visitPackage=new BaseDecorator(visitPackage);
         visitPackage=new RollerCoasterDecorator(visitPackage);
         visitPackage=new BumperCarDecorator(visitPackage);
-        visitPackage=new BumperCarDecorator(visitPackage);
+        visitPackage=new IceSculptureExhibitionDecorator(visitPackage);
         System.out.println("Visit Package price:"+visitPackage.getPrice());
         System.out.println("Visit Package content:"+visitPackage.getContent());
 
