@@ -13,7 +13,9 @@ public class ActivationQueue {
         this.head=0;
         this.count=0;
     }
-
+    public synchronized boolean isEmpty(){
+        return this.count==0;
+    }
     public synchronized void putRequest(MethodRequest request){
         while(count>=requestQueue.length){
             try {
