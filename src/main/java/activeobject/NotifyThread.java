@@ -23,7 +23,7 @@ public class NotifyThread extends Thread{
             if(result==null) continue;
             notifyCount.getAndDecrement();
             String value = (String) result.getResultValue();
-            if(value!=null)System.out.println(new Date()+" "+Thread.currentThread().getName()+":"+value);
+            if(value!=null)System.out.println(new Date()+" "+Thread.currentThread().getName()+" "+value);
         }
     }
 
