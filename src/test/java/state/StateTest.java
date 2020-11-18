@@ -1,9 +1,13 @@
 package state;
 
+import org.junit.Test;
+
 import java.util.Scanner;
 
 public class StateTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void main() {
         Device device = new Device();
         Scanner scanner = new Scanner(System.in);
         while(true){

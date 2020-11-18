@@ -1,7 +1,11 @@
 package transferObject;
 
+import org.junit.Test;
+
 public class TransferObjectTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void main() {
         UserBO userBusinessObject = new UserBO();
 
         userBusinessObject.addUser(new UserVO("Hans", "000E3C"));
