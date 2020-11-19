@@ -6,7 +6,7 @@ import proxy.GeneralManager;
 
 public class PublishSubscribeTest {
     @Test
-    public static void main(String[] args){
+    public  void main(){
 
         System.out.println("正在使用发布订阅者模式:");
 

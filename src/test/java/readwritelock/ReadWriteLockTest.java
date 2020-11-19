@@ -1,7 +1,7 @@
 package readwritelock;
 
 public class ReadWriteLockTest {
-    public static void main(String[] args) {
+    public void main() {
         System.out.println("正在使用读写锁模式:");
 
         Film film = new Film(10);

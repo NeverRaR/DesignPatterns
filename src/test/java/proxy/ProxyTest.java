@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class ProxyTest {
     @Test
-    public static void main(String[] args){
+    public void main(){
 
         System.out.println("正在使用代理模式:");
         //创建被代理对象
