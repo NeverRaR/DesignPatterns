@@ -2,6 +2,10 @@ package builder;
 
 import org.junit.Test;
 
+/**
+ * Test for builder
+ * @author Nntraveler
+ */
 public class BuilderTest {
     @Test
     public void main(){

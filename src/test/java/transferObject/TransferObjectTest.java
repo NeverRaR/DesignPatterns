@@ -2,6 +2,10 @@ package transferObject;
 
 import org.junit.Test;
 
+/**
+ * Test for transferObject
+ * @author Nntraveler
+ */
 public class TransferObjectTest {
 
     @Test

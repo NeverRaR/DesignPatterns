@@ -3,6 +3,10 @@ package bridge;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Test for bridge
+ * @author Nntraveler
+ */
 public class BridgeTest {
     public static void main(String[] args) {
         // Instantiates Stages and Performances

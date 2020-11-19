@@ -4,6 +4,10 @@ import org.junit.Test;
 
 import java.util.Scanner;
 
+/**
+ * Test for state
+ * @author Nntraveler
+ */
 public class StateTest {
 
     @Test

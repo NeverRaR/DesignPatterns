@@ -2,6 +2,10 @@ package observer;
 
 import org.junit.Test;
 
+/**
+ * Test for observer
+ * @author Nntraveler
+ */
 public class ObserverTest {
     @Test
     public void main(){
