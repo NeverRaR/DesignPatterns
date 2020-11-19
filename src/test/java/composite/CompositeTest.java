@@ -2,8 +2,6 @@ package composite;
 
 import org.junit.Test;
 
-import java.awt.desktop.SystemEventListener;
-
 public class CompositeTest {
     @Test
     public void main() {
