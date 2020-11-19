@@ -1,6 +1,6 @@
 package specification.facility;
 
-    public abstract class AbstractFacility implements Facility {
+    public abstract class AbstractFacility implement Facility {
 
         private final String name;
         private final FacilityType type;
