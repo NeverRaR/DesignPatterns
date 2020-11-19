@@ -1,12 +1,28 @@
 package builder;
 
-/*
- * Item entity
+/**
+ * The interface Item.
  * Inherited by specific item
- * e.g Burger
- * */
+ */
 public interface Item {
-    String name(); // return the name of item
-    Packing packing(); // pack the item
-    float price(); // return the price of item
+    /**
+     * Name string.
+     *
+     * @return the string of current item
+     */
+    String name();
+
+    /**
+     * Packing packing.
+     *
+     * @return the packing of current item
+     */
+    Packing packing();
+
+    /**
+     * Price float.
+     *
+     * @return the float of current item
+     */
+    float price();
 }

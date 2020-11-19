@@ -8,9 +8,11 @@ public class StateTest {
 
     @Test
     public void main() {
+        // Instantiates input
         Device device = new Device();
         Scanner scanner = new Scanner(System.in);
         while(true){
+            // wait for command
             System.out.println("cur state is: " + device.getState());
             System.out.println("please input command(0:exit 1:use 2:turn on 3: turn off 4: break down 5: fix)");
             try {
@@ -40,7 +42,7 @@ public class StateTest {
                 }
                 if (isEnd) break;
             }
-            catch (Exception e){
+            catch (Exception e){ // check input
                 System.out.println("invalid input!");
                 break;
             }

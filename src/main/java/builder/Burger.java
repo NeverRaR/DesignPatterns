@@ -1,13 +1,17 @@
 package builder;
 
-/*
- * Burger item
+/**
+ * The type Burger.
  * Inherited by specific burgers
- * e.g Hamburger
- * */
+ */
 public abstract class Burger implements Item{
+    /**
+     * use wrapper to pack burger
+     *
+     * @return the Wrapper packing
+     */
     @Override
     public Packing packing() {
         return new Wrapper();
-    } // use wrapper to pack burger
+    } //
 }
