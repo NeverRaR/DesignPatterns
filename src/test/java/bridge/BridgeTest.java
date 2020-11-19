@@ -1,5 +1,7 @@
 package bridge;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,8 @@ import java.util.List;
  * @author Nntraveler
  */
 public class BridgeTest {
-    public static void main(String[] args) {
+    @Test
+    public void main() {
         // Instantiates Stages and Performances
         BigStage bigStage = new BigStage(new DancePerformance());
         SmallStage smallStage = new SmallStage(new SingPerformance());
