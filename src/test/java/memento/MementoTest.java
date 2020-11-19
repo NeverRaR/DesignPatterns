@@ -1,11 +1,13 @@
 package memento;
 
+import org.junit.Test;
+
 public class MementoTest {
-    public static void main(String[] args) {
+    @Test
+    public  void main() {
         Game game = new Game();
         System.out.println("initial:");
         System.out.println(game.showMap());
-
         game.Play();
         System.out.println("After Playing:");
         System.out.println(game.showMap());

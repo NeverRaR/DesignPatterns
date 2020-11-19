@@ -1,7 +1,10 @@
 package pipeline;
 
-public class test {
-    public static void main(String[] args) {
+import org.junit.Test;
+
+public class PipelineTest {
+    @Test
+    public  void main() {
         Equipment e = new Equipment();
         System.out.println(e.toString());
         EquipmentMaintenancePipeline <Equipment,Equipment>

@@ -1,7 +1,10 @@
 package multition;
 
+import org.junit.Test;
+
 public class MultitionTest {
-    public static void main(String[] args) {
+    @Test
+    public  void main() {
         for(int i = 0;i<5;i++){
             System.out.println(Chair.getInstance(i));
         }
