@@ -1,43 +1,39 @@
 package readwritelock;
 
 public final class ReadWriteLock {
-    private int readingReaders=0;//实际正在读取的线程数量
-    private int waitingWriters=0;//正在等待写入的线程数量
-    private int writingWriters=0;//实际正在写入的线程数量
+    private int readingViewers=0;//实际正在观影的观众数量
+    private int waitingRepairmen =0;//正在等待维修的工人
+    private int writingRepairmen =0;//实际正在维修的工人
     private boolean preferWriter=true;//代表写入优先
 
     public synchronized void readlock() throws InterruptedException{
-        while(writingWriters>0||(preferWriter&&waitingWriters>0)){
+        while(writingRepairmen>0||(preferWriter&& waitingRepairmen >0)){
             wait();
         }
-        readingReaders++;
+        readingViewers++;
     }
 
     public synchronized void readUnlock(){
-        readingReaders--;
+        readingViewers--;
         preferWriter=true;
         notifyAll();
     }
 
     public synchronized void writeLock()throws InterruptedException{
-        waitingWriters++;
+        waitingRepairmen++;
         try {
-            while(readingReaders>0||writingWriters>0){
+            while(readingViewers>0||writingRepairmen>0){
                 wait();
             }
         }finally {
-            waitingWriters--;
+            waitingRepairmen--;
         }
-        writingWriters++;
+        writingRepairmen++;
     }
 
     public synchronized void writeUnlock(){
-        writingWriters--;
+        writingRepairmen--;
         preferWriter=false;
         notifyAll();
     }
-
-
-
-
 }

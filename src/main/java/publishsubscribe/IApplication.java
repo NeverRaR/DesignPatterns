@@ -2,9 +2,9 @@ package publishsubscribe;
 
 public interface IApplication {
 
-    public boolean subscribe(ApplicationManager publisher, Vistor subscriber);
+    public String subscribe(Entertainment entertainment, Vistor vistor);
 
-    public boolean unsubscribe(ApplicationManager publisher,Vistor subscriber);
+    public String unsubscribe(Entertainment entertainment, Vistor vistor);
 
-    public void publish(ApplicationManager publisher, Information info);
+    public void publish(Entertainment entertainment, Information info);
 }
