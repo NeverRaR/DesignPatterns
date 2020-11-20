@@ -1,5 +1,5 @@
 package dependencyInjection;
 
-public abstract class amusement {
+public abstract class Amusement {
     public abstract String getName();
 }

@@ -6,9 +6,9 @@ public class TicketFinder {
     private ArrayList<Ticket> TicketDataBase = new ArrayList<Ticket>();
 
     public TicketFinder(){
-        TicketDataBase.add(new ValidTicket("0001","0001"));
-        TicketDataBase.add(new ValidTicket("0002","0002"));
-        TicketDataBase.add(new ValidTicket("0003","0003"));
+        TicketDataBase.add(new ValidTicket("0001","0001","adult"));
+        TicketDataBase.add(new ValidTicket("0002","0002","adult"));
+        TicketDataBase.add(new ValidTicket("0003","0003","adult"));
     }
 
     public Ticket Find(Stub s){
