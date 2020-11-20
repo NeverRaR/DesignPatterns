@@ -7,11 +7,12 @@ public class ViewerThread extends Thread{
     public ViewerThread(Film film){
         this.film = film;
     }
+
     public void run(){
         try {
             while(true){
-                char[] readbuf = film.read();
-                System.out.println(Thread.currentThread().getName()+" reads "+String.valueOf(readbuf));
+                String filmmessage = film.read();
+                Thread.sleep(1000);
             }
         }catch (InterruptedException e){
 

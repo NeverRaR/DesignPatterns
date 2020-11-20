@@ -7,14 +7,12 @@ public class VistorController {
         this.app = app;
     }
 
-    public void subscribe(String subscriberName,String publisherName){
-        app.subscribe(new ApplicationManager(publisherName),new Vistor(subscriberName));
-        System.out.println(subscriberName+"已订阅了来自"+publisherName+"的消息");
+    public void subscribe(String vistorName,String entertainmentName){
+        System.out.println(app.subscribe(new Entertainment(entertainmentName),new Vistor(vistorName)));
     }
 
-    public void unsubscribe(String subscriberName,String publisherName){
-        app.unsubscribe(new ApplicationManager(publisherName),new Vistor(subscriberName));
-        System.out.println(subscriberName+"已取消订阅了来自"+publisherName+"的消息");
+    public void unsubscribe(String vistorName,String entertainmentName){
+        System.out.println(app.unsubscribe(new Entertainment(entertainmentName),new Vistor(vistorName)));
     }
 
 }
