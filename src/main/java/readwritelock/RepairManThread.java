@@ -13,7 +13,7 @@ public class RepairManThread extends Thread{
 
     public void run(){
         try {
-            while (true){
+            while (repairtimes<5){
                 repairtimes++;
                 film.write(film.getFilmname()+"(幕布维修"+repairtimes+"次)");
                 Thread.sleep(3000);

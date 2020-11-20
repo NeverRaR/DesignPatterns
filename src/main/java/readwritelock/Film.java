@@ -6,15 +6,14 @@ public class Film {
     private final ReadWriteLock lock = new ReadWriteLock();
 
     public Film(String name){
-       this.filmmessage = name;
+       this.filmmessage = name + "(幕布维修0次)";
        this.filmname = name;
     }
 
-    public String read()throws InterruptedException{
+    public void read()throws InterruptedException{
         lock.readlock();
         try {
             System.out.println(Thread.currentThread().getName()+"观看电影"+ filmmessage);
-            return filmmessage;
         }
         finally {
             lock.readUnlock();
