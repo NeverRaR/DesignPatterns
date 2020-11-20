@@ -19,7 +19,7 @@ public class SolveEventThread extends Thread{
         try {
             notifyThread.start();
             for (int i = 1; i < callCount + 1; i++) {
-                System.out.println(new Date() + " " + Thread.currentThread().getName() + " calls slove event" + i);
+                System.out.println(new Date() + " " + Thread.currentThread().getName() + " calls solve event" + i);
                 Result result = activeObject.solveEvent("Event" + i);
                 notifyThread.putResult(result);
             }
