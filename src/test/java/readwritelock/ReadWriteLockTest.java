@@ -3,7 +3,9 @@ package readwritelock;
 import org.junit.Test;
 
 public class ReadWriteLockTest {
-    public static void main(String args[]) {
+
+    @Test
+    public void main() {
         System.out.println("正在使用读写锁模式:");
 
         Film film = new Film("《冰雪奇缘》");
