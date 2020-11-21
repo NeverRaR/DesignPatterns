@@ -14,7 +14,7 @@ public abstract class TrainCabin {
      * @param cabinName cabin name
      */
     public void visitedBy(String customer, String cabinName) {
-        System.out.println(String.format("%s enters %s.", customer, cabinName));
+        System.out.println(String.format("(" + this.toString() + "): " + "%s enters %s.", customer, cabinName));
         serve(customer, cabinName);
     }
 }
