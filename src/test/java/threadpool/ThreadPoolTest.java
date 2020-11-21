@@ -1,14 +1,16 @@
 package threadpool;
 
-import org.junit.Test;
-
-import threadpool.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import org.junit.Test;
+import threadpool.*;
 
+/**
+ * @author nemo
+ */
 public class ThreadPoolTest {
+
     @Test
     public void main() {
         System.out.println("Test thread pool:");
