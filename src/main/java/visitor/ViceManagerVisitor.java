@@ -10,7 +10,7 @@ public class ViceManagerVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitStaff(Staff staff) {
-        // Do nothing
+        System.out.print("(" + this.toString() + "): " + "visitStaff\n");
     }
 
     /**
@@ -18,7 +18,7 @@ public class ViceManagerVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitViceManager(ViceManager viceManager) {
-        System.out.printf("Hello %s\n", viceManager);
+        System.out.printf("(" + this.toString() + "): " + "***Hello %s***\n", viceManager);
     }
 
     /**
@@ -26,6 +26,6 @@ public class ViceManagerVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitManager(Manager manager) {
-        // Do nothing
+        System.out.print("(" + this.toString() + "): " + "visitManager\n");
     }
 }

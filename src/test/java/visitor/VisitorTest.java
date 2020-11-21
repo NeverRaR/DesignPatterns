@@ -30,11 +30,17 @@ public class VisitorTest {
                 new Staff("Ice")
             )
         );
-        System.out.println("Find all staffs:");
+        System.out.println("======Find all staffs======");
         manager.accept(new StaffVisitor());
-        System.out.println("Find all vice managers:");
+        System.out.println("============");
+        System.out.print("\n\n\n");
+        System.out.println("======Find all vice managers======");
         manager.accept(new ViceManagerVisitor());
-        System.out.println("Find all manager(s):");
+        System.out.println("============");
+        System.out.print("\n\n\n");
+        System.out.println("======Find all manager(s)======");
         manager.accept(new ManagerVisitor());
+        System.out.println("============");
+        System.out.print("\n\n\n");
     }
 }

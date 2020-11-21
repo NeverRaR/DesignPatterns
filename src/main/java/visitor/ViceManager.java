@@ -21,8 +21,11 @@ public class ViceManager extends Employee {
      */
     @Override
     public void accept(EmployeeVisitor visitor) {
+        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "accept and begin to visit."));
         visitor.visitViceManager(this);
+        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "visit complete, continue to next (if any)"));
         super.accept(visitor);
+        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "accept complete."));
     }
 
     /**

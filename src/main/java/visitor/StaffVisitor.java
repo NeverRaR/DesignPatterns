@@ -10,7 +10,7 @@ public class StaffVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitStaff(Staff staff) {
-        System.out.printf("Greetings %s\n", staff);
+        System.out.printf("(" + this.toString() + "): " + "***Greetings %s***\n", staff);
     }
 
     /**
