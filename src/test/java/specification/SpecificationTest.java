@@ -63,13 +63,13 @@ public class SpecificationTest {
         System.out.println(
             "Sorting out facilities which is OUTDOOR and suitable for KIDS..."
         );
-        List<Facility> ourdoorTweenFacilityList = facilityList
+        List<Facility> outdoorTweenFacilityList = facilityList
             .stream()
             .filter(new FacilityTypeSelector(FacilityType.OUTDOOR))
             .filter(new FacilitySuitableAgeSelector(FacilitySuitableAge.KIDS))
             .collect(Collectors.toList());
         System.out.println("OUTDOOR and suitable for KIDS facilities:");
-        ourdoorTweenFacilityList.forEach(
+        outdoorTweenFacilityList.forEach(
             facility ->
                 System.out.println(
                     facility.getName() +
