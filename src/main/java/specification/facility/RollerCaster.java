@@ -1,5 +1,8 @@
 package specification.facility;
 
+/**
+ * @author nemo
+ */
 public class RollerCaster extends AbstractFacility {
     public RollerCaster()
     {

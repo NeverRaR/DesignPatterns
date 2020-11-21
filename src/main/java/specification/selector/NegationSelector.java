@@ -3,6 +3,7 @@ package specification.selector;
 /**
  * A Selector defined as the negation (NOT) of a (leaf) selectors. This is of course only useful
  * when used in combination with other composite selectors.
+ * @author nemo
  */
 public class NegationSelector<T> extends AbstractSelector<T> {
 

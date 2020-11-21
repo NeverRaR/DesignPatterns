@@ -1,5 +1,8 @@
 package specification.facility;
 
+/**
+ * @author nemo
+ */
 public class PirateShip extends AbstractFacility {
     public PirateShip()
     {

@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * A Selector defined as the conjunction (AND) of other (leaf) selectors.
+ * @author nemo
  */
 public class ConjunctionSelector<T> extends AbstractSelector<T> {
 

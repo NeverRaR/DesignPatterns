@@ -3,6 +3,9 @@ package specification.selector;
 import specification.facility.Facility;
 import specification.facility.FacilitySuitableAge;
 
+/**
+ * @author nemo
+ */
 public class FacilitySuitableAgeSelector extends AbstractSelector<Facility> {
 
     private final FacilitySuitableAge suitableAge;

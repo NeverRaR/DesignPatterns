@@ -3,6 +3,9 @@ package specification.selector;
 import specification.facility.Facility;
 import specification.facility.FacilityThrillLevel;
 
+/**
+ * @author nemo
+ */
 public class FacilityThrillLevelSelector extends AbstractSelector<Facility> {
 
 private final FacilityThrillLevel thrillLevel;

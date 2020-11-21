@@ -2,6 +2,9 @@ package specification.selector;
 
 import java.util.function.Predicate;
 
+/**
+ * @author nemo
+ */
 public abstract class AbstractSelector<T> implements Predicate<T> {
 
     public AbstractSelector<T> and(AbstractSelector<T> other) {
