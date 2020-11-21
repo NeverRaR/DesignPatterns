@@ -6,8 +6,13 @@ package specification.facility;
  * @author nemo
  */
 public class MadHatterTeaCups extends AbstractFacility {
-    public MadHatterTeaCups()
-    {
-        super("MadHatterTeaCups", FacilityType.INDOOR, FacilitySuitableAge.PRESCHOOLERS, FacilityThrillLevel.SLOWRIDES);
+
+    public MadHatterTeaCups() {
+        super(
+            "MadHatterTeaCups",
+            FacilityType.INDOOR,
+            FacilitySuitableAge.PRESCHOOLERS,
+            FacilityThrillLevel.SLOWRIDES
+        );
     }
 }

@@ -14,5 +14,5 @@ public enum FacilityThrillLevel {
     DARK,
     LOUD,
     SCARY,
-    SPINNING
+    SPINNING,
 }

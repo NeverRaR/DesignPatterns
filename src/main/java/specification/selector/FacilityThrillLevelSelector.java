@@ -8,14 +8,14 @@ import specification.facility.FacilityThrillLevel;
  */
 public class FacilityThrillLevelSelector extends AbstractSelector<Facility> {
 
-private final FacilityThrillLevel thrillLevel;
+    private final FacilityThrillLevel thrillLevel;
 
-public FacilityThrillLevelSelector(FacilityThrillLevel m) {
+    public FacilityThrillLevelSelector(FacilityThrillLevel m) {
         this.thrillLevel = m;
-        }
+    }
 
-@Override
-public boolean test(Facility t) {
+    @Override
+    public boolean test(Facility t) {
         return t.getFacilityThrillLevel().equals(thrillLevel);
-        }
+    }
 }

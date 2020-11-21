@@ -12,22 +12,20 @@ public enum FacilitySuitableAge {
     TEENS(15),
     ADULT(18);
 
-    private Integer age;
+    private final Integer age;
 
     /**
      * @return suitable age
      */
     // getter method
-    public Integer getAge()
-    {
+    public Integer getAge() {
         return this.age;
     }
 
     /**
      * @param age set age with corresponding enum
      */
-    private FacilitySuitableAge(Integer age)
-    {
+    FacilitySuitableAge(Integer age) {
         this.age = age;
     }
 }

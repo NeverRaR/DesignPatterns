@@ -7,5 +7,5 @@ package specification.facility;
  */
 public enum FacilityType {
     OUTDOOR,
-    INDOOR
+    INDOOR,
 }
