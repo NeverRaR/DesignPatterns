@@ -42,6 +42,7 @@ public class ThreadPoolTest {
         taskList.add(new NavigationTask(5));
         int STAFF_COUNT = 3;
         System.out.printf("Configured staff count is %d\n", STAFF_COUNT);
+        System.out.println("Running each task with given threadpool...");
         ExecutorService executor = Executors.newFixedThreadPool(STAFF_COUNT);
         taskList.stream().map(Worker::new).forEach(executor::execute);
         executor.shutdown();
