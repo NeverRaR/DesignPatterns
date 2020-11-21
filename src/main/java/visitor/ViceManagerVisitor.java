@@ -4,6 +4,7 @@ package visitor;
  * @author nemo
  */
 public class ViceManagerVisitor implements EmployeeVisitor {
+
     /**
      * @param staff Staff object
      */
@@ -11,6 +12,7 @@ public class ViceManagerVisitor implements EmployeeVisitor {
     public void visitStaff(Staff staff) {
         // Do nothing
     }
+
     /**
      * @param viceManager VinceManager object
      */
@@ -18,6 +20,7 @@ public class ViceManagerVisitor implements EmployeeVisitor {
     public void visitViceManager(ViceManager viceManager) {
         System.out.printf("Hello %s\n", viceManager);
     }
+
     /**
      * @param manager Manager object
      */

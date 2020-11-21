@@ -18,5 +18,4 @@ public interface EmployeeVisitor {
      * @param manager Manager object
      */
     void visitManager(Manager manager);
-
 }
