@@ -1,9 +1,10 @@
 package visitor;
 
+/**
+ * @author nemo
+ */
 public class Manager extends Employee {
-
     private final String employeeName;
-
     /**
      * @param employeeName employee (manager) name to initialize
      * @param children children under current Manager object
@@ -12,7 +13,6 @@ public class Manager extends Employee {
         super(employeeName, children);
         this.employeeName = employeeName;
     }
-
     /**
      * @param visitor EmployeeVisitor Object
      */
@@ -21,7 +21,6 @@ public class Manager extends Employee {
         visitor.visitManager(this);
         super.accept(visitor);
     }
-
     /**
      *
      * @return String: Manager with his name
