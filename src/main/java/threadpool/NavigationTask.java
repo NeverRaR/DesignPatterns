@@ -19,6 +19,10 @@ public class NavigationTask extends Task {
      */
     @Override
     public String toString() {
-        return String.format("%s %s", this.getClass().getSimpleName(), super.toString());
+        return String.format(
+            "%s %s",
+            this.getClass().getSimpleName(),
+            super.toString()
+        );
     }
 }
