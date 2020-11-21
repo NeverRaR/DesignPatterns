@@ -21,11 +21,38 @@ public class Manager extends Employee {
      */
     @Override
     public void accept(EmployeeVisitor visitor) {
-        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "accept and begin to visit."));
+        System.out.println(
+            String.format(
+                "(" +
+                this.toString() +
+                ", " +
+                super.toString() +
+                "): " +
+                "accept and begin to visit."
+            )
+        );
         visitor.visitManager(this);
-        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "visit complete, continue to next (if any)"));
+        System.out.println(
+            String.format(
+                "(" +
+                this.toString() +
+                ", " +
+                super.toString() +
+                "): " +
+                "visit complete, continue to next (if any)"
+            )
+        );
         super.accept(visitor);
-        System.out.println(String.format("(" + this.toString() + ", " + super.toString() + "): " + "accept complete."));
+        System.out.println(
+            String.format(
+                "(" +
+                this.toString() +
+                ", " +
+                super.toString() +
+                "): " +
+                "accept complete."
+            )
+        );
     }
 
     /**

@@ -26,6 +26,9 @@ public class ManagerVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitManager(Manager manager) {
-        System.out.printf("(" + this.toString() + "): " + "***Hello %s***\n", manager);
+        System.out.printf(
+            "(" + this.toString() + "): " + "***Hello %s***\n",
+            manager
+        );
     }
 }

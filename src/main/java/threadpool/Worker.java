@@ -22,8 +22,8 @@ public class Worker implements Runnable {
     @Override
     public void run() {
         System.out.println(
-            String.format("(" + this.toString() + "): " +
-                            "%s processing %s",
+            String.format(
+                "(" + this.toString() + "): " + "%s processing %s",
                 Thread.currentThread().getName(),
                 task.toString()
             )

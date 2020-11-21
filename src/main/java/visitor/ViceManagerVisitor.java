@@ -18,7 +18,10 @@ public class ViceManagerVisitor implements EmployeeVisitor {
      */
     @Override
     public void visitViceManager(ViceManager viceManager) {
-        System.out.printf("(" + this.toString() + "): " + "***Hello %s***\n", viceManager);
+        System.out.printf(
+            "(" + this.toString() + "): " + "***Hello %s***\n",
+            viceManager
+        );
     }
 
     /**
