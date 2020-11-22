@@ -1,10 +1,11 @@
 package nullobject;
 
-import junit.framework.TestCase;
 
-public class NullObjectTest extends TestCase {
+import org.junit.Test;
 
-    public void test() {
+public class NullObjectTest {
+    @Test
+    public  void main() {
         System.out.println("NullObjectTest:");
 
         System.out.println("\tCreate two stubs 0002 and 0004\n");

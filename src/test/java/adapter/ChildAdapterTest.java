@@ -2,6 +2,8 @@ package adapter;
 
 import org.junit.Test;
 
+import java.util.Scanner;
+
 public class ChildAdapterTest  {
     @Test
     public void main() {

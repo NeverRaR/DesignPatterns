@@ -1,9 +1,10 @@
 package memento;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class MementoTest extends TestCase {
-    public void test() {
+public class MementoTest {
+    @Test
+    public  void main() {
         /**
          * Initialize a GamePlayer to play tiao-jia chess.
          */
@@ -40,5 +41,6 @@ public class MementoTest extends TestCase {
         System.out.println("\n\t"+ gamePlayer.showBoard());
 
         System.out.println("Exit MementoTest\n");
+
     }
 }

@@ -1,6 +1,6 @@
 package nullobject;
 
-public class Stub implements Ticket{
+public class Stub {
 
     String ID;
     String customerID;
@@ -11,12 +11,11 @@ public class Stub implements Ticket{
     public Stub(){
         this("0001","0001");
     }
-    @Override
+
     public String getID() {
         return ID;
     }
 
-    @Override
     public String getCustomerID() {
         return customerID;
     }
@@ -25,7 +24,6 @@ public class Stub implements Ticket{
      * show Info of the Stub
      * @return info:String,stitched together from instance information and ID
      */
-    @Override
     public String getInfo() {
         return this+":getInfo():"+ID;
     }

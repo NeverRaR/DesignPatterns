@@ -1,6 +1,5 @@
 package activeobject;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class SolveEventThread extends Thread{
@@ -8,21 +7,26 @@ public class SolveEventThread extends Thread{
     private final NotifyThread notifyThread;
     private final int callCount;
 
-    public SolveEventThread(String name,ActiveObject activeObject,int callCount){
+    public SolveEventThread(String name,ActiveObject activeObject,NotifyThread notifyThread,int callCount){
         super(name);
         this.callCount=callCount;
-        this.notifyThread=new NotifyThread("通知",callCount);
+        this.notifyThread=notifyThread;
         this.activeObject=activeObject;
     }
 
     @Override
     public void run() {
-        notifyThread.start();
-        for (int i = 0; i < callCount; i++) {
-            System.out.println(new Date()+" "+Thread.currentThread().getName()+" calls slove event"+i);
-            Result result = activeObject.solveEvent("Event" + i);
-            notifyThread.putResult(result);
+        try {
+            notifyThread.start();
+            for (int i = 1; i < callCount + 1; i++) {
+                System.out.println(new Date() + " " + Thread.currentThread().getName() + " calls solve event" + i);
+                Result result = activeObject.solveEvent("Event" + i);
+                notifyThread.putResult(result);
+            }
         }
-        interrupt();
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        activeObject.kill();
     }
 }

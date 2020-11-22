@@ -5,7 +5,7 @@ import org.junit.Test;
 public class FacilityFactoryTest {
 
     @Test
-    public void main() {
+    public void main(){
         System.out.println("Test abstract factory:");
         FacilityFactory factory;
         System.out.println("Use PolarBear Style Facility:");

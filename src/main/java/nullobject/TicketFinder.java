@@ -12,9 +12,9 @@ public class TicketFinder {
      * Add three default Tickets into DataBase
      */
     public TicketFinder(){
-        TicketDataBase.add(new ValidTicket("0001","0001"));
-        TicketDataBase.add(new ValidTicket("0002","0002"));
-        TicketDataBase.add(new ValidTicket("0003","0003"));
+        TicketDataBase.add(new ValidTicket("0001","0001","adult"));
+        TicketDataBase.add(new ValidTicket("0002","0002","adult"));
+        TicketDataBase.add(new ValidTicket("0003","0003","adult"));
     }
 
     /**
