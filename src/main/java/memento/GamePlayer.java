@@ -1,5 +1,7 @@
 package memento;
-
+/**
+ * @author 1851594王思桐
+ */
 class GamePlayer {
 
     private int[][] board = {

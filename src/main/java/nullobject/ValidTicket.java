@@ -1,6 +1,7 @@
 package nullobject;
-
-
+/**
+ * @author 1851594王思桐
+ */
 public class ValidTicket implements Ticket{
     private String ID;
     private String customerID;

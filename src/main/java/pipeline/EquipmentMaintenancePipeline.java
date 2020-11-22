@@ -1,5 +1,7 @@
 package pipeline;
-
+/**
+ * @author 1851594王思桐
+ */
 class EquipmentMaintenancePipeline<I,O> {
 
     private final Handler<I,O> currentHandler;

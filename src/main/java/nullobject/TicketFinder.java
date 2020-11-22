@@ -1,7 +1,9 @@
 package nullobject;
 
 import java.util.ArrayList;
-
+/**
+ * @author 1851594王思桐
+ */
 public class TicketFinder {
     /**
      * Emulate a Ticket Database

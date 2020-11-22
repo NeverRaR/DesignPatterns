@@ -2,7 +2,9 @@ package multition;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+/**
+ * @author 1851594王思桐
+ */
 public final class ChairMultition {
     private final int chairIndex;
 

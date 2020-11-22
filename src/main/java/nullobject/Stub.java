@@ -1,5 +1,7 @@
 package nullobject;
-
+/**
+ * @author 1851594王思桐
+ */
 public class Stub {
 
     String ID;

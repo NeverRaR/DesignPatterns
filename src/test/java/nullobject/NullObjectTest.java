@@ -2,6 +2,10 @@ package nullobject;
 
 import org.junit.Test;
 
+/**
+ * Unit Test for Null Object pattern
+ * @author 1851594王思桐
+ */
 public class NullObjectTest {
     @Test
     public  void main() {

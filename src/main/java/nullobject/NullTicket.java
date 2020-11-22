@@ -1,5 +1,8 @@
 package nullobject;
 
+/**
+ * @author 1851594王思桐
+ */
 public class NullTicket implements Ticket{
     /**
      * show Info of the NullTicket
