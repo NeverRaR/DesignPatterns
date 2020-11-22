@@ -1,16 +1,44 @@
 package memento;
 
-public class MementoTest {
-    public static void main(String[] args) {
-        Game game = new Game();
-        System.out.println("initial:");
-        System.out.println(game.showMap());
+import junit.framework.TestCase;
 
-        game.Play();
-        System.out.println("After Playing:");
-        System.out.println(game.showMap());
-        game.Restart();
-        System.out.println("After Restart:");
-        System.out.println(game.showMap());
+public class MementoTest extends TestCase {
+    public void test() {
+        /**
+         * Initialize a GamePlayer to play tiao-jia chess.
+         */
+        GamePlayer gamePlayer = new GamePlayer();
+
+        /**
+         * Check its initial map.
+         */
+        System.out.println("MementoTest:\n\tInitialGameMap:");
+        System.out.println("\n\t"+ gamePlayer.showBoard());
+
+        /**
+         * Play a single game.
+         */
+        gamePlayer.play();
+
+        /**
+         * Check the game map after playing.
+         */
+        System.out.println("\tAfter Playing:");
+        System.out.println("\n\t"+ gamePlayer.showBoard());
+
+        /**
+         * Restart the gamePlayer to have another match
+         * instead of delete the player and new anotherone .
+         */
+        gamePlayer.restart();
+
+        /**
+         * Check the game board again,
+         * it should be reset to the initial board.
+         */
+        System.out.println("\t"+"After Restart:");
+        System.out.println("\n\t"+ gamePlayer.showBoard());
+
+        System.out.println("Exit MementoTest\n");
     }
 }

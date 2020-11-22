@@ -22,4 +22,13 @@ class ValidTicket implements Ticket{
     public String getCustomerID() {
         return customerID;
     }
+
+    /**
+     * show Info of the Ticket
+     * @return info:String,stitched together from instance information and ID
+     */
+    @Override
+    public String getInfo() {
+        return this+":getInfo():"+ID;
+    }
 }
