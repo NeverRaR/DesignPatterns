@@ -1,7 +1,9 @@
 package memento;
 
 import org.junit.Test;
-
+/**
+ * @author 1851594王思桐
+ */
 public class MementoTest {
     @Test
     public  void main() {

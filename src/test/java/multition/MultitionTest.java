@@ -1,8 +1,9 @@
 package multition;
 
-
 import org.junit.Test;
-
+/**
+ * @author 1851594王思桐
+ */
 public class MultitionTest {
     @Test
     public  void main() {
