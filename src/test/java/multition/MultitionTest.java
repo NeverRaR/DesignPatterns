@@ -6,7 +6,6 @@ import org.junit.Test;
 public class MultitionTest {
     @Test
     public  void main() {
-
         System.out.println("Multition Test:");
 
         for(int i = 0;i<5;i++){

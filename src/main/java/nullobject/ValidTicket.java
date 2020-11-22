@@ -26,7 +26,6 @@ public class ValidTicket implements Ticket{
         return customerID;
     }
 
-
     /**
      * show Info of the Ticket
      * @return info:String,stitched together from instance information and ID
@@ -44,4 +43,5 @@ public class ValidTicket implements Ticket{
     public boolean isNull() {
         return false;
     }
+
 }

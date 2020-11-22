@@ -1,6 +1,5 @@
 package nullobject;
 
-
 import org.junit.Test;
 
 public class NullObjectTest {
