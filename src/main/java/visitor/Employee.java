@@ -8,7 +8,6 @@ import java.util.Arrays;
 public abstract class Employee {
 
     private final Employee[] children;
-
     private String employeeName;
 
     public Employee(String employeeName, Employee... children) {

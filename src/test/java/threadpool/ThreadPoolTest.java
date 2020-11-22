@@ -1,14 +1,16 @@
 package threadpool;
 
-import org.junit.Test;
-
-import threadpool.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import org.junit.Test;
+import threadpool.*;
 
+/**
+ * @author nemo
+ */
 public class ThreadPoolTest {
+
     @Test
     public void main() {
         System.out.println("Test thread pool:");
@@ -40,6 +42,7 @@ public class ThreadPoolTest {
         taskList.add(new NavigationTask(5));
         int STAFF_COUNT = 3;
         System.out.printf("Configured staff count is %d\n", STAFF_COUNT);
+        System.out.println("Running each task with given threadpool...");
         ExecutorService executor = Executors.newFixedThreadPool(STAFF_COUNT);
         taskList.stream().map(Worker::new).forEach(executor::execute);
         executor.shutdown();
