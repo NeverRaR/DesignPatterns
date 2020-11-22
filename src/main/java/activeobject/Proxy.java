@@ -14,4 +14,9 @@ public class Proxy implements ActiveObject{
         scheduler.invoke(new SolveEventRequest(servant,future,message));
         return future;
     }
+
+    @Override
+    public void kill(){
+        scheduler.setDead();
+    }
 }

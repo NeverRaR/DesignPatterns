@@ -1,5 +1,6 @@
 package nullobject;
 
+
 class NullTicket implements Ticket{
 
     /**
@@ -15,6 +16,7 @@ class NullTicket implements Ticket{
      * return null when calling this method
      * @return null
      */
+
     @Override
     public String getID() {
         return null;
@@ -27,5 +29,16 @@ class NullTicket implements Ticket{
     @Override
     public String getCustomerID() {
         return null;
+    }
+
+    @Override
+    public boolean isNull() {
+        return true;
+    }
+
+    @Override
+    public void buy() {
+        System.out.println("("+this.toString()+") : ");
+        System.out.println("Wrong message!");
     }
 }
