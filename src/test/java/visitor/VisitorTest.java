@@ -1,5 +1,6 @@
 package visitor;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import visitor.*;
@@ -8,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-public class VisitorTest {
+public class VisitorTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test visitor:");
         System.out.println("Initializing a tree structure...");
         Manager manager = new Manager("Su",

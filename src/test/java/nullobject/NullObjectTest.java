@@ -1,10 +1,11 @@
 package nullobject;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class NullObjectTest {
+public class NullObjectTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         Stub stub = new Stub("0002","0002");
         Stub stub1 = new Stub("0004","0004");
         TicketFinder finder = new TicketFinder();

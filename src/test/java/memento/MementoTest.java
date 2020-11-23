@@ -1,10 +1,11 @@
 package memento;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class MementoTest {
+public class MementoTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         Game game = new Game();
         System.out.println("initial:");
         System.out.println(game.showMap());

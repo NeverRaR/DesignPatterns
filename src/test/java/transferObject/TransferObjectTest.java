@@ -1,15 +1,16 @@
 package transferObject;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Test for transferObject
  * @author Nntraveler
  */
-public class TransferObjectTest {
+public class TransferObjectTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         UserBO userBusinessObject = new UserBO();
 
         userBusinessObject.addUser(new UserVO("Hans", "000E3C"));

@@ -1,10 +1,11 @@
 package pipeline;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class PipelineTest {
+public class PipelineTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         Equipment e = new Equipment();
         System.out.println(e.toString());
         EquipmentMaintenancePipeline <Equipment,Equipment>

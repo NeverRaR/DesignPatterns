@@ -1,14 +1,15 @@
 package builder;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Test for builder
  * @author Nntraveler
  */
-public class BuilderTest {
+public class BuilderTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
         // create a waiter
         Waiter waiter = new Waiter();
         // ready to build hamburger meal

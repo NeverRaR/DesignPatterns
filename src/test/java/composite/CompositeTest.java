@@ -1,10 +1,11 @@
 package composite;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class CompositeTest {
+public class CompositeTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test composite:");
         //新建员工信息
         Employee CEO = new Employee("Dri","CEO","Run", 110, 20);

@@ -1,10 +1,11 @@
 package command;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class CommandTest {
+public class CommandTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test command:");
         //下命令
         Command command = new Command();

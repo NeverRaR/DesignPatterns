@@ -2,14 +2,16 @@ package templatemethod;
 
 import java.util.List;
 import java.util.ArrayList;
+
+import junit.framework.TestCase;
 import org.junit.Test;
 import java.util.stream.Collectors;
 
 import templatemethod.*;
 
-public class TemplateMethodTest {
+public class TemplateMethodTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test template method:");
         System.out.println("Creating cabinOne with DiningCabin..");
         HalflingCabin cabinOne = new HalflingCabin("cabinOne", new DiningCabin());

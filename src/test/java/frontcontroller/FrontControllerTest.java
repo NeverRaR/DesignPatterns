@@ -1,8 +1,9 @@
 package frontcontroller;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FrontControllerTest {
+public class FrontControllerTest extends TestCase {
     @Test
     public void test(){
         System.out.println("FrontController:");

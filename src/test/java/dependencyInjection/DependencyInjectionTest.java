@@ -3,9 +3,9 @@ package dependencyInjection;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class DependencyInjectionTest {
+public class DependencyInjectionTest extends TestCase{
     @Test
-    public void main() {
+    public void test() {
         DependencyInjection.test();
     }
 }

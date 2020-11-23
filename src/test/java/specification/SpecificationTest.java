@@ -2,15 +2,17 @@ package specification;
 
 import java.util.List;
 import java.util.ArrayList;
+
+import junit.framework.TestCase;
 import org.junit.Test;
 import java.util.stream.Collectors;
 
 import specification.facility.*;
 import specification.selector.*;
 
-public class SpecificationTest {
+public class SpecificationTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test specification:");
         System.out.println("Initializing facilities...");
         List<Facility> facilityList = new ArrayList<>();

@@ -1,10 +1,11 @@
 package multition;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class MultitionTest {
+public class MultitionTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         for(int i = 0;i<5;i++){
             System.out.println(Chair.getInstance(i));
         }

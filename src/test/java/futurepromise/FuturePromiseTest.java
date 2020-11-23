@@ -1,10 +1,11 @@
 package futurepromise;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FuturePromiseTest {
+public class FuturePromiseTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test Future Promise: ");
         Kitchen kitchen = new Kitchen();
         Dishes d1 = new Dishes("Fried Chicken", 12);

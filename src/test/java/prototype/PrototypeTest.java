@@ -1,10 +1,11 @@
 package prototype;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class PrototypeTest {
+public class PrototypeTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
 
         System.out.println("使用原型模式构建对象:");
 

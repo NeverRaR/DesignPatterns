@@ -1,12 +1,13 @@
 package publishsubscribe;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 import proxy.FinanceManagerProxy;
 import proxy.GeneralManager;
 
-public class PublishSubscribeTest {
+public class PublishSubscribeTest extends TestCase {
     @Test
-    public  void main(){
+    public  void test(){
 
         System.out.println("正在使用发布订阅者模式:");
 

@@ -2,11 +2,12 @@ package featuretoggle;
 
 import featuretoggle.player.Player;
 import featuretoggle.player.PlayerGroup;
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FeatureToggleTest {
+public class FeatureToggleTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test Feature Toggle: ");
         SkiingService service = new FeatureToggle();
         final Player player1 = new Player("Race_1");

@@ -1,10 +1,11 @@
 package proxy;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ProxyTest {
+public class ProxyTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
 
         System.out.println("正在使用代理模式:");
         //创建被代理对象

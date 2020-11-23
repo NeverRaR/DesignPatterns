@@ -1,10 +1,11 @@
 package factory;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FactoryTest {
+public class FactoryTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test factory:");
         BuildFacility buildFacility = new BuildFacility();
         //新建设施

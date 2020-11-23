@@ -1,9 +1,10 @@
 package readwritelock;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ReadWriteLockTest {
-    public static void main(String args[]) {
+public class ReadWriteLockTest extends TestCase {
+    public static void test(String args[]) {
         System.out.println("正在使用读写锁模式:");
 
         Film film = new Film(10);
