@@ -3,6 +3,9 @@ package specification.selector;
 import specification.facility.Facility;
 import specification.facility.FacilityType;
 
+/**
+ * @author nemo
+ */
 public class FacilityTypeSelector extends AbstractSelector<Facility> {
 
     private final FacilityType type;

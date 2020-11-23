@@ -2,6 +2,9 @@ package specification.facility;
 
 // https://www.shanghaidisneyresort.com/en/attractions/theme-park/map/
 
+/**
+ * @author nemo
+ */
 public enum FacilityThrillLevel {
     SLOWRIDES,
     THRILLRIDES,
@@ -11,5 +14,5 @@ public enum FacilityThrillLevel {
     DARK,
     LOUD,
     SCARY,
-    SPINNING
+    SPINNING,
 }

@@ -1,54 +1,43 @@
 package readwritelock;
 
 public class Film {
-    private final char[] buffer;
+    private String filmmessage;
+    private String filmname;
     private final ReadWriteLock lock = new ReadWriteLock();
 
-    public Film(int size){
-        this.buffer=new char[size];
-        for(int i=0;i<buffer.length;i++){
-            buffer[i]='*';
-        }
+    public Film(String name){
+       this.filmmessage = name + "(幕布维修0次)";
+       this.filmname = name;
     }
 
-    public char[] read()throws InterruptedException{
+    public void read()throws InterruptedException{
         lock.readlock();
         try {
-            return doRead();
+            System.out.println(Thread.currentThread().getName()+"观看电影"+ filmmessage);
         }
         finally {
             lock.readUnlock();
         }
     }
 
-    public void write(char c) throws InterruptedException{
+    public void write(String s) throws InterruptedException{
         lock.writeLock();
         try{
-            doWrite(c);
+            System.out.println("维修工人正在维修幕布，不可观看电影，请等待！");
+            slowlyWrite();
+            this.filmmessage = s;
         }finally {
             lock.writeUnlock();
         }
     }
 
-    private char[] doRead(){
-        char[] newbuf = new char[buffer.length];
-        for(int i = 0;i<buffer.length;i++){
-            newbuf[i]=buffer[i];
-        }
-        slowly();
-        return newbuf;
+    public String getFilmname() {
+        return filmname;
     }
 
-    private void doWrite(char c){
-        for (int i=0;i<buffer.length;i++){
-            buffer[i]=c;
-            slowly();
-        }
-    }
-
-    private void slowly(){
+    private void slowlyWrite(){
         try{
-            Thread.sleep(50);
+            Thread.sleep(5000);
         }catch (InterruptedException e ){
 
         }

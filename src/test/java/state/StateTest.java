@@ -9,10 +9,10 @@ import java.util.Scanner;
  * Test for state
  * @author Nntraveler
  */
-public class StateTest extends TestCase {
+public  class StateTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         // Instantiates
         Device device = new Device();
         System.out.println("cur state is: " + device.getState());

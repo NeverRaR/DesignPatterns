@@ -25,6 +25,10 @@ public class Equipment {
         return problems;
     }
 
+    /**
+     * remove Problem of index i from problems,
+     * @param i the index of the problem to be removed.
+     */
     public void deleteProblem(int i){
         if(i >= problems.size()){
             return;
@@ -32,6 +36,11 @@ public class Equipment {
         problems.remove(i);
         return;
     }
+
+    /**
+     * add a problem p to the ArrayList problems.
+     * @param p
+     */
     public void addProblem(Problem p){
         if(!problems.contains(p)){
             problems.add(p);
@@ -48,9 +57,9 @@ public class Equipment {
     @Override
     public String toString(){
 
-        return "Equipment"+" "+name+
-                " inUse: "+isInUse+
-                " problems: "+problems.toString() ;
+        return "Equipment:"+" "+name+
+                "\tinUse: " +isInUse+
+                "\tproblems: "+problems.toString() ;
     }
 
     public class Problem{
@@ -69,6 +78,9 @@ public class Equipment {
             this.name = name;
         }
 
+        /**
+         * fix this problem by setting the isFixed = true.
+         */
         public void fix(){
             isFixed = true;
         }

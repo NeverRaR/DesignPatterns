@@ -3,15 +3,20 @@ package readwritelock;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ReadWriteLockTest extends TestCase {
-    public static void test(String args[]) {
+public class ReadWriteLockTest extends TestCase{
+
+    @Test
+    public void test() {
         System.out.println("正在使用读写锁模式:");
 
-        Film film = new Film(10);
+        Film film = new Film("《冰雪奇缘》");
         ViewerThread viewer1= new ViewerThread(film);
-        ViewerThread viewer2=new ViewerThread(film);
+        ViewerThread viewer2= new ViewerThread(film);
         ViewerThread viewer3= new ViewerThread(film);
-        RepairManThread  repairMan= new RepairManThread(film, "坏好坏好坏好坏好坏好");
+        viewer1.setName("观众1");
+        viewer2.setName("观众2");
+        viewer3.setName("观众3");
+        RepairManThread repairMan= new RepairManThread(film);
         viewer1.start();
         viewer2.start();
         viewer3.start();
