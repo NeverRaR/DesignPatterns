@@ -4,22 +4,23 @@ package readwritelock;
  * @author 1754025徐菡志
  */
 
-public class RepairManThread extends Thread{
+public class AudienceThread extends Thread{
 
     private final Film film;
-    private int numberofrepairs;
+    private int numberofwatch;
 
     /**
-     * The constructor of RepairManThread Class.
+     * The constructor of AudienceThread Class.
      * @param film: the object of film.
+     * @param threadname: the name of thread.
      */
-    public RepairManThread(Film film){
+    public AudienceThread(Film film,String threadname){
         this.film = film;
-        this.setName("repairman");
+        this.setName(threadname);
         System.out.println(this.getClass().getSimpleName()+
                 ":("+
                 this.hashCode()+
-                "):RepairManThread():create the object of RepairManThread Class named "+
+                "):AudienceThread():create the object of AudienceThread Class named "+
                 this.getName()+
                 " successfully.");
     }
@@ -29,14 +30,13 @@ public class RepairManThread extends Thread{
      */
     public void run(){
         try {
-            while (numberofrepairs<5){
-                numberofrepairs++;
-                film.write(film.getFilmname()+"(The screen has been repaired "+numberofrepairs+" times)");
-                Thread.sleep(3000);
+            while(numberofwatch<16){
+                numberofwatch++;
+                film.read();
+                Thread.sleep(1000);
             }
         }catch (InterruptedException e){
 
         }
     }
-
 }
