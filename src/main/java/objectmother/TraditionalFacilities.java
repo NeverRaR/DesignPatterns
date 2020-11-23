@@ -76,9 +76,11 @@ public class TraditionalFacilities implements Facilities{
      */
     public void enter() {
         if (isClosed) {
+//            System.out.print("TraditionalFacilities:getInstance:("+this.toString()+"): ");
             System.out.println("This facility is now malfunctioning and is really under repair!");
         }
         else {
+//            System.out.print("TraditionalFacilities:getInstance:("+this.toString()+"): ");
             System.out.println("Enter to play happily in the facility!");
         }
     }
