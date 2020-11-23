@@ -18,7 +18,7 @@ public class BigStage extends Stage{
      */
     @Override
     protected void doPerform() {
-        System.out.print("This is a big stage. ");
+        System.out.print("[BigStage:doPerform]: This is a big stage. ");
         super.doPerform();
     }
 }

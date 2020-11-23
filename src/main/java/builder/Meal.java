@@ -36,7 +36,7 @@ public class Meal {
      */
     public void showItems(){
         for (Item item : items) {
-            System.out.print("Item : "+item.name());
+            System.out.print("[Meal:showItems]: Item : "+item.name());
             System.out.print(", Packing : "+item.packing().pack());
             System.out.println(", Price : "+item.price() + " yuan");
         }

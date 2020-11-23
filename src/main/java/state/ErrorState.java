@@ -24,7 +24,7 @@ public class ErrorState implements State{
      */
     @Override
     public void doUse(Device device) {
-        System.out.println("This device is broken. Failed to use it!");
+        System.out.println("[ErrorState:doUse]: This device is broken. Failed to use it!");
     }
 
     /**
@@ -34,7 +34,7 @@ public class ErrorState implements State{
      */
     @Override
     public void doOn(Device device) {
-        System.out.println("This device is broken. Nothing happens!");
+        System.out.println("[ErrorState:doOn]: This device is broken. Nothing happens!");
     }
 
     /**
@@ -44,7 +44,7 @@ public class ErrorState implements State{
      */
     @Override
     public void doOff(Device device) {
-        System.out.println("This device is broken. Nothing happens!");
+        System.out.println("[ErrorState:doOff]: This device is broken. Nothing happens!");
     }
 
     /**
@@ -54,7 +54,7 @@ public class ErrorState implements State{
      */
     @Override
     public void doDown(Device device) {
-        System.out.println("This device is already broken.");
+        System.out.println("[ErrorState:doDown]: This device is already broken.");
     }
 
     /**
@@ -64,7 +64,7 @@ public class ErrorState implements State{
      */
     @Override
     public void doFix(Device device) {
-        System.out.println("Successfully fix the device! Now you can turn it on.");
+        System.out.println("[ErrorState:doFix]: Successfully fix the device! Now you can turn it on.");
         device.changeState(OffState.getInstance());
     }
 

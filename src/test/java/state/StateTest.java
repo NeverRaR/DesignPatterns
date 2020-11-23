@@ -14,7 +14,7 @@ public class StateTest {
     public void main() {
         // Instantiates
         Device device = new Device();
-        System.out.println("cur state is: " + device.getState());
+        System.out.println("[StateTest:main]: cur state is: " + device.getState());
         // off state
         device.doUse();
         device.doOn();
