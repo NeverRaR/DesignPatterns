@@ -6,13 +6,13 @@ package proxy;
 
 public class FinanceManagerProxy implements IFinanceManager{
 
-    private IFinanceManager target;
+    private GeneralManager target;
 
     /**
      * The constructor of FinanceManagerProxy class.
      * @param target:target proxy.
      */
-    public FinanceManagerProxy(IFinanceManager target){
+    public FinanceManagerProxy(GeneralManager target){
         this.target = target;
         System.out.println(getClass().getSimpleName() +
                 ":(" +
