@@ -43,7 +43,7 @@ import threadpool.ThreadPoolTest;
 import transferObject.TransferObjectTest;
 import visitor.VisitorTest;
 
-public class MainTest extends TestCase {
+public class MainTest  {
 
     public static void main(String[] args) {
         TestRunner.run(getAllTest());
