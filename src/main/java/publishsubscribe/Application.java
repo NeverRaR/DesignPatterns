@@ -5,73 +5,114 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-//游乐园的App，即发布订阅中心
+/**
+ * @author 1754025徐菡志
+ */
+
 public class Application implements IApplication{
 
-        private static Map<String, Set<String>> AppMap;//存放所有发布者所对应的订阅者群
+        private static Map<String, Set<String>> AppMap;
 
         static{
                 AppMap = new HashMap<>();
         }
 
+        /**
+         * The constructor of Application Class.
+         */
+        public Application(){
+                System.out.println(this.getClass().getSimpleName()+":("+this.hashCode()+"):Application():create the object of Application successfully.");
+        }
+
+        /**
+         * Perform subscription operations.
+         * @param entertainment: the entertainment that will be subscribed.
+         * @param visitor: the visitor who wants to subscribe entertainment.
+         */
         @Override
-        public String subscribe(Entertainment entertainment, Vistor vistor){
+        public void subscribe(Entertainment entertainment, Visitor visitor){
 
                 try{
-                        //获取存储订阅当前项目的所有游客的集合
-                        Set<String> vistorSet = AppMap.get(entertainment.getName());
-                        if(vistorSet==null){
-                                vistorSet = new HashSet<>();
+                        //Get the collection of all visitors who have subscribed to the current item.
+                        Set<String> visitorSet = AppMap.get(entertainment.getName());
+                        if(visitorSet==null){
+                                visitorSet = new HashSet<>();
                         }
 
-                        //向集合中加入新的订阅游客
-                        if(vistorSet.add(vistor.getName())){
-                                //添加成功则对订阅者群进行更新
-                                AppMap.put(entertainment.getName(),vistorSet);
-                                return "订阅成功！["+vistor.getName()+"]"+"已订阅了"+"["+entertainment.getName()+"]信息";
+                        //Add new subscribers to the collection.
+                        if(visitorSet.add(visitor.getName())){
+                                AppMap.put(entertainment.getName(),visitorSet);
+
+                                System.out.println(this.getClass().getSimpleName()+":("+
+                                        this.hashCode()+"):subscribe():"+
+                                        "Subscribed successfully!"+
+                                        " ["+visitor.getName()+"] "+"has subscribed to"+" ["+entertainment.getName()+"] information.");
                         }
                         else{
-                                //添加失败则证明该项目的订阅者群中已经存在了该订阅者
-                                return "订阅失败！["+vistor.getName()+"]"+"已订阅过"+"["+entertainment.getName()+"]信息";
+                                System.out.println(this.getClass().getSimpleName()+":("+
+                                        this.hashCode()+"):subscribe():"+
+                                        "Failed to subscription!"+
+                                        " ["+visitor.getName()+"] "+"has subscribed to"+" ["+entertainment.getName()+"]information before!");
                         }
                 }catch(Exception e){
                         e.printStackTrace();
                 }
-                return "订阅失败！未知错误！";
         }
 
+        /**
+         * Perform unsubscription operations.
+         * @param entertainment: the entertainment that will be unsubscribed.
+         * @param visitor: the visitor who wants to unsubscribe entertainment.
+         */
         @Override
-        public String unsubscribe(Entertainment entertainment, Vistor vistor) {
+        public void unsubscribe(Entertainment entertainment, Visitor visitor) {
 
                 try{
-                        //获取存储订阅当前项目的所有游客的集合
+                        //Get the collection of all visitors who have subscribed to the current item.
                         Set<String> vistorSet = AppMap.get(entertainment.getName());
                         if(vistorSet==null){
                                 vistorSet = new HashSet<>();
                         }
 
-                        //向集合中加入新的订阅游客
-                        if(vistorSet.remove(vistor.getName())){
-                                //删除成功则对订阅者群进行更新
+                        //Delete the corresponding visitor from the collection.
+                        if(vistorSet.remove(visitor.getName())){
                                 AppMap.put(entertainment.getName(),vistorSet);
-                                return "取消订阅成功！["+vistor.getName()+"]"+"已取消订阅了"+"["+entertainment.getName()+"]信息";
+
+                                System.out.println(this.getClass().getSimpleName()+":("+
+                                        this.hashCode()+"):unsubscribe():"+
+                                        "Unsubscribed successfully!"+
+                                        " ["+visitor.getName()+"] "+"has unsubscribed to "+"["+entertainment.getName()+"] information.");
                         }
                         else{
-                                //删除失败则证明该游客没有订阅此项目信息
-                                return "取消订阅失败！["+vistor.getName()+"]"+"还未订阅过"+"["+entertainment.getName()+"]信息";
+                                System.out.println(this.getClass().getSimpleName()+":("+
+                                        this.hashCode()+"):unsubscribe():"+
+                                        "Failed to unsubscription!"+
+                                        " ["+visitor.getName()+"] "+"has not subscribed to "+"["+entertainment.getName()+"] information.");
                         }
                 }catch (Exception e){
                         e.printStackTrace();
                 }
-                return "取消订阅失败！未知错误！";
         }
 
+        /**
+         * Perform publish operations.
+         * @param entertainment: the entertainment to publish information.
+         * @param info: the information that will be published.
+         */
         @Override
         public void publish(Entertainment entertainment, Information info){
-                Set<String> subscriberSet =  AppMap.get(entertainment.getName());
+                Set<String> subscriberSet = AppMap.get(entertainment.getName());
                 for (String subscriber : subscriberSet) {
-                        System.out.println("向订阅了[" + entertainment.getName()
-                                +"]的游客[" + subscriber + "]发送消息: " +  info.getInformation());
+                        System.out.println(this.getClass().getSimpleName()+
+                                ":("+
+                                this.hashCode()+
+                                "):publish():"+
+                                "Send a message to "+"["+
+                                subscriber +"]"+
+                                " who have subscribed to "+"["+
+                                entertainment.getName() +"]"+
+                                ":\"" +
+                                info.getInformation()+"\".");
                 }
         }
 
