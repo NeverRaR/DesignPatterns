@@ -4,8 +4,10 @@ import org.junit.Test;
 
 public class DtoTest {
     @Test
+    /**
+     * Get new tools.
+     */
     public void test(){
-        //新的物料
         Tools skiBoard = new Tools();
         skiBoard.name = "skiboard";
         skiBoard.price = "100";

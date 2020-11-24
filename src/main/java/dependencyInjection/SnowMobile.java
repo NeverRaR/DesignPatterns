@@ -1,6 +1,8 @@
 package dependencyInjection;
 
-//雪上摩托
+/**
+ * @author Nam
+ */
 public class SnowMobile extends Amusement{
     @Override
     public String getName() {
