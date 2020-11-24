@@ -38,16 +38,22 @@ public class FacilitiesObjectMotherTest {
         assertFalse(elevator.isDamaged());
         assertFalse(elevator.isPowered());
 
+        System.out.print("TraditionalFacilities:getInstance:("+bicycleCenter.toString()+"): ");
         System.out.print("Bicycle Center: ");
         bicycleCenter.enter();
+        System.out.print("TraditionalFacilities:getInstance:("+toilet.toString()+"): ");
         System.out.print("Toilet: ");
         toilet.enter();
+        System.out.print("ElectronicFacilities:getInstance:("+gondola.toString()+"): ");
         System.out.print("Gondola: ");
         gondola.enter();
+        System.out.print("ElectronicFacilities:getInstance:("+rollerCoaster.toString()+"): ");
         System.out.print("Roller Coaster: ");
         rollerCoaster.enter();
+        System.out.print("ElectronicFacilities:getInstance:("+bumperCars.toString()+"): ");
         System.out.print("Bumper Cars: ");
         bumperCars.enter();
+        System.out.print("ElectronicFacilities:getInstance:("+elevator.toString()+"): ");
         System.out.print("Elevator: ");
         elevator.enter();
     }
