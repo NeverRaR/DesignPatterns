@@ -8,19 +8,19 @@ import static org.junit.Assert.assertEquals;
 public class FlyWeightTest extends TestCase {
     @Test
     public void test(){
-        System.out.println("测试Flyweight模式：");
-        System.out.println("");
+        System.out.println("(" + this.toString() + ") : " + "Testing Flyweight pattern：");
 
         AbstractCoinFactory GoldCoinFactory = new GoldCoinFactory();
         BigCoin firstBigCoin = GoldCoinFactory.createBigCoin();
         int hashCode_1 = firstBigCoin.hashCode();
-        System.out.println("Hash code of the first object of BigCoin is: " + hashCode_1);
+        System.out.println("(" + this.toString() + ") : " + "Hash code of the first object of BigCoin is: " + hashCode_1);
 
         BigCoin secondBigCoin = GoldCoinFactory.createBigCoin();
         int hashCode_2 = secondBigCoin.hashCode();
-        System.out.println("Hash code of the second object of Hoe is: " + hashCode_2);
+        System.out.println("(" + this.toString() + ") : " + "Hash code of the second object of BigCoin is: " + hashCode_2);
 
         assertEquals(hashCode_1, hashCode_2);
-        System.out.println("先后获取的两个实例对象的hashCode一样，说明共享同一份内存空间，测试成功！");
+        System.out.println("(" + this.toString() + ") : " + "The hashCode of the two instance objects obtained successively is the same" +
+                " indicating that they share the same memory space");
     }
 }

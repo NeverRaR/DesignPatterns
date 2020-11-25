@@ -27,15 +27,15 @@ public class ElectronicMenu {
      */
 
     private void update(){
-        System.out.println("(" + this.toString() + ") : " + "正在获取时间信息\n.\n.\n.\n");
+        System.out.println("(" + this.toString() + ") : " + "Getting time information\n");
         try {
-            Thread.currentThread().sleep(3000);
+            Thread.currentThread().sleep(1000);
         } catch (Exception e) {
             System.out.println("Got an exception!");
         }
-        System.out.println("(" + this.toString() + ") : " + "更新完毕\n");
+        System.out.println("(" + this.toString() + ") : " + "Update completed\n");
         Date date = new Date();
-        content = String.format("更新时间：%tc", date);
+        content = String.format("Update time：%tc", date);
         isDirty = false;
     }
 

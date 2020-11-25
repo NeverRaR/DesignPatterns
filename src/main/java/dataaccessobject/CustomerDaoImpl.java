@@ -24,6 +24,7 @@ public class CustomerDaoImpl implements CustomerDao{
             in.close();
             String str = new String(buffer, "UTF-8");
             Customer cus = (Customer)fromString(str);
+            System.out.println("("+this.toString()+") : "+"Get customer data from local file system");
             return cus;
         } catch (ClassNotFoundException|IOException e) {
             return null;
@@ -43,7 +44,7 @@ public class CustomerDaoImpl implements CustomerDao{
             FileOutputStream fileOut = new FileOutputStream(filePath);
             fileOut.write(str.getBytes());
             fileOut.close();
-            System.out.println("Customer data is saved");
+            System.out.println("("+ this.toString() + ") : " + "Customer data is saved to local file system");
         } catch (IOException e) {
             return false;
         }

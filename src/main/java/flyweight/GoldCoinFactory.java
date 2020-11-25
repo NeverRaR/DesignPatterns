@@ -12,10 +12,10 @@ public class GoldCoinFactory extends AbstractCoinFactory{
      * Constructor, initializing bigCoin and smallCoin to null
      */
     public GoldCoinFactory(){
-        System.out.println("======== 使用抽象工厂 Abstract Factory 模式 ========");
+
         this.bigCoin = null;
         this.smallCoin = null;
-        System.out.println("成功创建金色硬币工厂");
+        System.out.println("(" + this.toString() + ") : " + "Create GoldCoinFactory successfully!");
     }
 
     /**
@@ -24,10 +24,10 @@ public class GoldCoinFactory extends AbstractCoinFactory{
      */
     @Override
     public BigCoin createBigCoin() {
-        System.out.println("======== 使用享元 Flyweight 模式 ========");
         if(this.bigCoin == null){
             this.bigCoin = new BigCoin();
         }
+        System.out.println("(" + this.toString() + ") : " + "Create BigCoin successfully!");
         return this.bigCoin;
     }
 
@@ -37,10 +37,10 @@ public class GoldCoinFactory extends AbstractCoinFactory{
      */
     @Override
     public SmallCoin createSmallCoin() {
-        System.out.println("======== 使用享元 Flyweight 模式 ========");
         if(this.smallCoin == null){
             this.smallCoin = new SmallCoin();
         }
+        System.out.println("(" + this.toString() + ") : " + "Create SmallCoin successfully!");
         return this.smallCoin;
     }
 }

@@ -33,6 +33,6 @@ public class DrinkNode extends Node{
     @Override
     public void Execute() {
 
-        System.out.println("(" + this.toString() + ") : " + drinkName + "    " + "数量： " + num + "    总价： " + num * unitPrice + "\n");
+        System.out.println("(" + this.toString() + ") : " + drinkName + "    " + "Quantity： " + num + "    Total price： " + num * unitPrice + "\n");
     }
 }
