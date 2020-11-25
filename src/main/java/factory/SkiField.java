@@ -5,6 +5,7 @@ package factory;
  * @author 1853615邓斯语
  */
 public class SkiField implements Facility {
+
     /**
      * let ski field be built
      */

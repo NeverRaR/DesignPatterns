@@ -8,6 +8,7 @@ import java.util.ArrayList;
  * @author 1853615邓斯语
  */
 public class Employee {
+
     private String name;
     private String pos;                           //position
     private String responsibility;                //what kind of work an employee is responsible for

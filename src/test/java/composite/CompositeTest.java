@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class CompositeTest extends TestCase {
+
     @Test
     public void test() {
         System.out.println("Test composite pattern:");

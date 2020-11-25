@@ -4,6 +4,7 @@ package command;
  * @author 1853615邓斯语
  */
 public class PutUp implements Order {
+
     private Command command;
 
     /**

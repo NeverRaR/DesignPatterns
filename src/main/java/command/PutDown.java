@@ -5,6 +5,7 @@ package command;
  * @author 1853615邓斯语
  */
 public class PutDown implements Order {
+
     private Command command;
 
     /**

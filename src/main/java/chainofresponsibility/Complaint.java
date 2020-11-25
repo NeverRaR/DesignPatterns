@@ -7,6 +7,7 @@ import java.util.Objects;
  * @author 1853615邓斯语
  */
 public class Complaint {
+
     // three types of complaint
     public enum ComplaintType {
         SERVICE, FACILITY, ENVIRONMENT

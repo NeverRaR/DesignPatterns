@@ -5,6 +5,7 @@ package factory;
  * @author 1853615邓斯语
  */
 public class BuildFacility {
+
     public Facility build(String name) {
         if(name == null) {
             return null;

@@ -5,6 +5,7 @@ package factory;
  * @author 1853615邓斯语
  */
 public class IceRink implements Facility {
+
     /**
      * let ice rink be built
      */

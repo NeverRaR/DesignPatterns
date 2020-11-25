@@ -5,6 +5,7 @@ package chainofresponsibility;
  * @author 1853615邓斯语
  */
 public abstract class ComplaintHandler {
+
     private ComplaintHandler next;
 
     /**
