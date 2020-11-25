@@ -39,11 +39,11 @@ public class UserBO {
      */
     public void deleteUser(UserVO user) {
         if(!users.contains(user)){
-            System.out.println("[UserBO:deleteUser]: User: ID "+user.getUserId()+", is not in database");
+            System.out.println("[UserBO:" +toString()+ ":deleteUser]: User: ID "+user.getUserId()+", is not in database");
             return;
         }
         users.remove(user);
-        System.out.println("[UserBO:deleteUser]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"] " + "deleted");
+        System.out.println("[UserBO:" +toString()+ ":deleteUser]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"] " + "deleted");
     }
 
     /**
@@ -54,11 +54,11 @@ public class UserBO {
      */
     public void addUser(UserVO user) {
         if(users.contains(user)){
-            System.out.println("[UserBO:addUser]: User: ID "+user.getUserId()+", is already in database");
+            System.out.println("[UserBO:" +toString()+ ":addUser]: User: ID "+user.getUserId()+", is already in database");
             return;
         }
         users.add(user);
-        System.out.println("[UserBO:addUser]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"] " + "added");
+        System.out.println("[UserBO:" +toString()+ ":addUser]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"] " + "added");
     }
 
     /**
@@ -78,7 +78,7 @@ public class UserBO {
      */
     public UserVO getUser(int index) {
         if(index >= users.size() || index < 0){
-            System.out.println("[UserBO:getUser]: rollNo "+ index + ", is out of range");
+            System.out.println("[UserBO:" +toString()+ ":getUser]: rollNo "+ index + ", is out of range");
         }
         return users.get(index);
     }

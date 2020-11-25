@@ -9,6 +9,6 @@ public class DancePerformance implements Performance {
      */
     @Override
     public void performActivity() {
-        System.out.println("[DancePerformance:performActivity]: This stage is holding dancing performance!");
+        System.out.println("[DancePerformance:" + toString() + ":performActivity]: This stage is holding dancing performance!");
     }
 }

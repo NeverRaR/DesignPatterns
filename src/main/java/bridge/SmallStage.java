@@ -18,7 +18,7 @@ public class SmallStage extends Stage {
      */
     @Override
     public void doPerform() {
-        System.out.println("[SmallStage:doPerform]: This is a small stage. ");
+        System.out.println("[SmallStage:" + toString() + ":doPerform]: This is a small stage. ");
         super.doPerform();
     }
 }

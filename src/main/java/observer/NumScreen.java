@@ -28,6 +28,6 @@ public class NumScreen extends NumObserver {
      * Show num.
      */
     public void show(){
-        System.out.println("[NumScreen:show]: There are " + peopleNum.getVal() + " people in the park now. Have a good day!");
+        System.out.println("[NumScreen:" + toString() + ":show]: There are " + peopleNum.getVal() + " people in the park now. Have a good day!");
     }
 }

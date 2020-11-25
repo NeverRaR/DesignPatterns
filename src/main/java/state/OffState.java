@@ -24,7 +24,7 @@ public class OffState implements State{
      */
     @Override
     public void doUse(Device device) {
-        System.out.println("[OffState:doUse]: This device is off. You must turn it on first!");
+        System.out.println("[OffState:" +toString()+ ":doUse]: This device is off. You must turn it on first!");
     }
 
     /**
@@ -34,7 +34,7 @@ public class OffState implements State{
      */
     @Override
     public void doOn(Device device) {
-        System.out.println("[OffState:doOn]: Successfully turn it on!");
+        System.out.println("[OffState:" +toString()+ ":doOn]: Successfully turn it on!");
         device.changeState(OnState.getInstance());
     }
 
@@ -45,7 +45,7 @@ public class OffState implements State{
      */
     @Override
     public void doOff(Device device) {
-        System.out.println("[OffState:doOff]: This device is already off.");
+        System.out.println("[OffState:" +toString()+ ":doOff]: This device is already off.");
     }
 
     /**
@@ -55,7 +55,7 @@ public class OffState implements State{
      */
     @Override
     public void doDown(Device device) {
-        System.out.println("[OffState:doDown]: Oops! This device is broken down.");
+        System.out.println("[OffState:" +toString()+ ":doDown]: Oops! This device is broken down.");
         device.changeState(ErrorState.getInstance());
     }
 
@@ -66,7 +66,7 @@ public class OffState implements State{
      */
     @Override
     public void doFix(Device device) {
-        System.out.println("[OffState:doFix]: This device works well now. No needs to fix");
+        System.out.println("[OffState:" +toString()+ ":doFix]: This device works well now. No needs to fix");
     }
 
     /**
@@ -74,7 +74,7 @@ public class OffState implements State{
      *
      * @return the current state
      */
-    public String toString(){
+    public String getState(){
         return "Off";
     }
 }

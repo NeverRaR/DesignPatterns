@@ -17,16 +17,16 @@ public class BuilderTest extends TestCase {
         waiter.prepareMeal();
         Meal hamburger = waiter.getMeal();
         // show hamburger meal set info
-        System.out.println("[BuilderTest:main]: hamburger");
+        System.out.println("[BuilderTest:test]: hamburger");
         hamburger.showItems();
-        System.out.println("[BuilderTest:main]: total cost: " + hamburger.getCost() + " yuan");
+        System.out.println("[BuilderTest:test]: total cost: " + hamburger.getCost() + " yuan");
         // ready to build chicken burger meal
         waiter.setMealBuilder(new ChickenBurgerMealBuilder());
         waiter.prepareMeal();
         Meal chickenBurger = waiter.getMeal();
         // show chicken burger meal set info
-        System.out.println("[BuilderTest:main]: chickenBurger");
+        System.out.println("[BuilderTest:test]: chickenBurger");
         chickenBurger.showItems();
-        System.out.println("[BuilderTest:main]: total cost: " + chickenBurger.getCost() + " yuan");
+        System.out.println("[BuilderTest:test]: total cost: " + chickenBurger.getCost() + " yuan");
     }
 }

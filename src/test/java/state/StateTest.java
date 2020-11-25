@@ -9,13 +9,13 @@ import java.util.Scanner;
  * Test for state
  * @author Nntraveler
  */
-public  class StateTest extends TestCase {
+public class StateTest extends TestCase {
 
     @Test
     public void test() {
         // Instantiates
         Device device = new Device();
-        System.out.println("[StateTest:main]: cur state is: " + device.getState());
+        System.out.println("[StateTest:test]: cur state is: " + device.getState());
         // off state
         device.doUse();
         device.doOn();
