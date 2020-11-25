@@ -5,8 +5,10 @@ import org.junit.Test;
 
 public class DtoTest extends TestCase {
     @Test
+    /**
+     * Get new tools.
+     */
     public void test(){
-        //新的物料
         Tools skiBoard = new Tools();
         skiBoard.name = "skiboard";
         skiBoard.price = "100";
