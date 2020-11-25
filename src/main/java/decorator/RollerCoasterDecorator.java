@@ -1,5 +1,8 @@
 package decorator;
 
+/**
+ * @author  NeverRaR
+ */
 public class RollerCoasterDecorator extends BaseDecorator {
     public  RollerCoasterDecorator(VisitPackage wrappee){
         super(wrappee);

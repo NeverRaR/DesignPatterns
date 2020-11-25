@@ -1,5 +1,8 @@
 package decorator;
 
+/**
+ * @author  NeverRaR
+ */
 public class IceSculptureExhibitionDecorator extends BaseDecorator {
     public  IceSculptureExhibitionDecorator(VisitPackage wrappee){
         super(wrappee);

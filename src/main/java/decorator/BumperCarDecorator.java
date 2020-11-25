@@ -1,5 +1,8 @@
 package decorator;
 
+/**
+ * @author  NeverRaR
+ */
 public class BumperCarDecorator extends BaseDecorator {
     BumperCarDecorator(VisitPackage wrappee){
         super(wrappee);
