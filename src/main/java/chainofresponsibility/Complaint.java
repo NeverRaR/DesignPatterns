@@ -2,26 +2,39 @@ package chainofresponsibility;
 
 import java.util.Objects;
 
+/**
+ * define complaint class, including type and state
+ * @author 1853615邓斯语
+ */
 public class Complaint {
-    //三种类型的投诉：服务 设备 环境
+    // three types of complaint
     public enum ComplaintType {
         SERVICE, FACILITY, ENVIRONMENT
     }
     private ComplaintType complaintType;
-    // private String complaintDescription;
     private boolean handled = false;
 
+    /**
+     * constructor
+     * @param complaintType
+     */
     public Complaint(ComplaintType complaintType) {
         this.complaintType = Objects.requireNonNull(complaintType);
-        // this.complaintDescription = Objects.requireNonNull(complaintDescription);
     }
 
-    // public String getComplaintDescription() { return complaintDescription; }
-
+    /**
+     * @return the type of complaint
+     */
     public ComplaintType getComplaintType() { return complaintType; }
 
+    /**
+     * change the state of complaint to handled
+     */
     public void markHandled() { this.handled = true; }
 
+    /**
+     * @return the state of complaint
+     */
     public boolean isHandled() { return this.handled; }
 }
 

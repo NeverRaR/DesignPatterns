@@ -1,5 +1,9 @@
 package factory;
 
+/**
+ * define BuildFacility class, which return new facility
+ * @author 1853615邓斯语
+ */
 public class BuildFacility {
     public Facility build(String name) {
         if(name == null) {
@@ -14,10 +18,7 @@ public class BuildFacility {
         else if(name == "cable car") {
             return new CableCar();
         }
-//        else {
-//            return
-//        }
-        System.out.println("This kind of facility does not supported to be built now");
+        System.out.println("BuildFacility: This kind of facility does not supported to be built now");
         return null;
     }
 }
