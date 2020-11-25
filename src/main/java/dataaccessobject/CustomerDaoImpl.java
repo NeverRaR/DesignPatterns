@@ -3,10 +3,17 @@ package dataaccessobject;
 import java.io.*;
 import java.util.Base64;
 
+/**
+ * Implementation of the CustomerDao interface
+ */
 public class CustomerDaoImpl implements CustomerDao{
 
     private String filePath = new String("./Customer.dat");
 
+    /**
+     * get customer information from file system
+     * @return Customer
+     */
     @Override
     public Customer getCustomer() {
         try{
@@ -24,7 +31,11 @@ public class CustomerDaoImpl implements CustomerDao{
 
     }
 
-
+    /**
+     * update customer information to given file
+     * @param customer the given customer information
+     * @return
+     */
     @Override
     public boolean updateCustomer(Customer customer) {
         try {

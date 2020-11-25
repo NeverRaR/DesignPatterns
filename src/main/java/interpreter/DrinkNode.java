@@ -1,20 +1,25 @@
 package interpreter;
 
+
 public class DrinkNode extends Node{
     private String drinkName;
     private Integer num;
     private Integer unitPrice;
 
+    /**
+     * Interpreter for drink node
+     * @param context
+     */
     @Override
     public void Interpret(Context context) {
         if(context.getCurToken()=="KCKL"){
-            drinkName = "可口可乐";
+            drinkName = "Cola";
             unitPrice = 3;
         }else if(context.getCurToken() == "NMC"){
-            drinkName = "柠檬茶";
+            drinkName = "Tea";
             unitPrice = 5;
         }else if(context.getCurToken() == "KQS"){
-            drinkName = "矿泉水";
+            drinkName = "Water";
             unitPrice = 2;
         }
         context.nextToken();
@@ -22,6 +27,9 @@ public class DrinkNode extends Node{
         context.nextToken();;
     }
 
+    /**
+     * execute the total price of the drink
+     */
     @Override
     public void Execute() {
 

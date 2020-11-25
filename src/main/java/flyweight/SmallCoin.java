@@ -1,5 +1,8 @@
 package flyweight;
 
+/**
+ * Small coin implements coin interface
+ */
 public class SmallCoin implements Coin {
     @Override
     public void pay() {
