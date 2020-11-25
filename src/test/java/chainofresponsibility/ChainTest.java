@@ -1,10 +1,11 @@
 package chainofresponsibility;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ChainTest {
+public class ChainTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test chainofresponsibility:");
         HandleChain chain = new HandleChain();
         //三种投诉都测试一次

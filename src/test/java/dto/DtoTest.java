@@ -1,8 +1,9 @@
 package dto;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class DtoTest {
+public class DtoTest extends TestCase {
     @Test
     public void test(){
         //新的物料

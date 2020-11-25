@@ -1,10 +1,11 @@
 package activeobject;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ActiveObjectTest {
+public class ActiveObjectTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
 
         try {
             NotifyThread notifyThread=new NotifyThread("Notification",200);

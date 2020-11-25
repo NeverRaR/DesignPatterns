@@ -1,8 +1,9 @@
 package interpreter;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class InterpreterTest {
+public class InterpreterTest extends TestCase {
     @Test
     public void test(){
         System.out.println("(" + this.toString() + ") : " + "Testing Interpreter");

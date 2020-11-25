@@ -1,8 +1,9 @@
 package dirtyflag;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ElectronicUpdateTest {
+public class ElectronicUpdateTest extends TestCase {
     @Test
     public void test(){
         System.out.println("(" + this.toString() + ") : " + "Testing Dirty Flag");

@@ -1,19 +1,22 @@
 package proxy;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ProxyTest {
+public class ProxyTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
 
-        System.out.println("正在使用代理模式:");
-        //创建被代理对象
+        System.out.println("ProxyTest:");
+
+        System.out.println("Creating the object to be proxied...");
         GeneralManager generalManager = new GeneralManager();
+        System.out.println();
 
-        //创建代理对象
+        System.out.println("Creating the proxy object...");
         FinanceManagerProxy financeManagerProxy = new FinanceManagerProxy(generalManager);
+        System.out.println();
 
-        //开始代理执行工作
         financeManagerProxy.manageFinance();
 
     }

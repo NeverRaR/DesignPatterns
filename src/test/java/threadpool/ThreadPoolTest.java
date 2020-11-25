@@ -1,5 +1,10 @@
 package threadpool;
 
+import junit.framework.TestCase;
+import org.junit.Test;
+
+import threadpool.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -9,10 +14,11 @@ import threadpool.*;
 /**
  * @author nemo
  */
-public class ThreadPoolTest {
+public class ThreadPoolTest  extends TestCase {
+
 
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test thread pool:");
         System.out.println("Initializing tasks...");
         List<Task> taskList = new ArrayList<>();

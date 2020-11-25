@@ -1,6 +1,9 @@
 package templatemethod;
 
 import java.util.ArrayList;
+
+import junit.framework.TestCase;
+import org.junit.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.Test;
@@ -9,10 +12,10 @@ import templatemethod.*;
 /**
  * @author nemo
  */
-public class TemplateMethodTest {
+public class TemplateMethodTest extends TestCase  {
 
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test template method:");
         System.out.println("Creating cabinOne with DiningCabin..");
         HalflingCabin cabinOne = new HalflingCabin(

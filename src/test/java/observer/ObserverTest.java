@@ -1,14 +1,15 @@
 package observer;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * Test for observer
  * @author Nntraveler
  */
-public class ObserverTest {
+public class ObserverTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
         // create observable peopleNum
         PeopleNum peopleNum = new PeopleNum();
         // create observers

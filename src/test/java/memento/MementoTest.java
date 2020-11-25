@@ -1,12 +1,14 @@
 package memento;
 
+import junit.framework.TestCase;
 import org.junit.Test;
+
 /**
  * @author 1851594王思桐
  */
-public class MementoTest {
+public class MementoTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         /**
          * Initialize a GamePlayer to play tiao-jia chess.
          */

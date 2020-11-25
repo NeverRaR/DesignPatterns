@@ -1,10 +1,11 @@
 package flyweight;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class FlyWeightTest {
+public class FlyWeightTest extends TestCase {
     @Test
     public void test(){
         System.out.println("测试Flyweight模式：");

@@ -1,5 +1,6 @@
 package state;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.Scanner;
@@ -8,10 +9,10 @@ import java.util.Scanner;
  * Test for state
  * @author Nntraveler
  */
-public class StateTest {
+public  class StateTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         // Instantiates
         Device device = new Device();
         System.out.println("[StateTest:main]: cur state is: " + device.getState());

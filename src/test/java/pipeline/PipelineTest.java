@@ -1,12 +1,13 @@
 package pipeline;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 /**
  * @author 1851594王思桐
  */
-public class MaintainEquipmentTest  {
+public class PipelineTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("PipelineTest:");
 
         System.out.println("\tCreate a new equipment:");

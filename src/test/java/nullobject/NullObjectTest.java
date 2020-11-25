@@ -1,14 +1,12 @@
 package nullobject;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-/**
- * Unit Test for Null Object pattern
- * @author 1851594王思桐
- */
-public class NullObjectTest {
+
+public class NullObjectTest extends TestCase {
     @Test
-    public  void main() {
+    public  void test() {
         System.out.println("NullObjectTest:");
 
         System.out.println("\tCreate two stubs 0002 and 0004\n");
