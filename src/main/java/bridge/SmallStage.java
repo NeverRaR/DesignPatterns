@@ -9,7 +9,7 @@ public class SmallStage extends Stage {
      *
      * @param performance the performance
      */
-    protected SmallStage(Performance performance) {
+    public SmallStage(Performance performance) {
         super(performance);
     }
 
@@ -17,8 +17,8 @@ public class SmallStage extends Stage {
      * Do perform.
      */
     @Override
-    protected void doPerform() {
-        System.out.print("[SmallStage:doPerform]: This is a small stage. ");
+    public void doPerform() {
+        System.out.println("[SmallStage:doPerform]: This is a small stage. ");
         super.doPerform();
     }
 }

@@ -9,7 +9,7 @@ public class BigStage extends Stage{
      *
      * @param performance the performance
      */
-    protected BigStage(Performance performance) {
+    public BigStage(Performance performance) {
         super(performance);
     }
 
@@ -17,8 +17,8 @@ public class BigStage extends Stage{
      * Do perform.
      */
     @Override
-    protected void doPerform() {
-        System.out.print("[BigStage:doPerform]: This is a big stage. ");
+    public void doPerform() {
+        System.out.println("[BigStage:doPerform]: This is a big stage. ");
         super.doPerform();
     }
 }
