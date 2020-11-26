@@ -1,10 +1,11 @@
 package monostate;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class BillboardTest {
+public class BillboardTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
         System.out.println("1# Initial News");
         Billboard billboardOutsideTheParadise = new Billboard();
         System.out.print("billboardOutsideTheParadise:getInstance:("+billboardOutsideTheParadise.toString()+"): ");

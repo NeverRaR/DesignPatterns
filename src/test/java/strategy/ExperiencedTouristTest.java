@@ -1,10 +1,11 @@
 package strategy;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ExperiencedTouristTest {
+public class ExperiencedTouristTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("1# Initial Destination");
         ExperiencedTourist Sam = new ExperiencedTourist(new goToChillingRestaurant());
         System.out.print("ExperiencedTourist:getInstance:("+Sam.toString()+"): ");

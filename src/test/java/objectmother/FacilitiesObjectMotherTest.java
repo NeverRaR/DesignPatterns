@@ -1,13 +1,14 @@
 package objectmother;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class FacilitiesObjectMotherTest {
+public class FacilitiesObjectMotherTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         FacilitiesObjectMother facilitiesObjectMother = new FacilitiesObjectMother();
         TraditionalFacilities bicycleCenter = facilitiesObjectMother.createUndamagedTraditionalFacilities();
         TraditionalFacilities toilet = facilitiesObjectMother.createDamagedTraditionalFacilities();
