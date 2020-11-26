@@ -6,6 +6,10 @@ package factory;
  */
 public class BuildFacility {
 
+    /**
+     * @param name
+     * @return different instance or null according to given name
+     */
     public Facility build(String name) {
         if(name == null) {
             return null;
