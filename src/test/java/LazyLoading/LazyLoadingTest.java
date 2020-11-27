@@ -1,11 +1,12 @@
 package LazyLoading;
 
+import junit.framework.TestCase;
 import lazyload.lazyLoading;
 import org.junit.Test;
 
-public class LazyLoadingTest {
+public class LazyLoadingTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test Feature Toggle: ");
         lazyLoading.handleActor();
     }

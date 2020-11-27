@@ -1,11 +1,12 @@
 package frontcontroller;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FrontControllerTest {
+public class FrontControllerTest extends TestCase {
     @Test
     public void test(){
-        System.out.println("FrontController:");
+        System.out.println("(" + this.toString() + ") : " + "FrontController:");
         FrontController frontController = new FrontController();
         frontController.dispatchRequest("HOME", "Jack");
         frontController.dispatchRequest("HOME", "admin");

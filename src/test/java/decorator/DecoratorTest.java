@@ -3,9 +3,9 @@ package decorator;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class DecoratorTest  {
+public class DecoratorTest extends TestCase {
     @Test
-    public void main(){
+    public void test(){
         System.out.println("Test decorator:");
         VisitPackage visitPackage=new Ticket(200.0,"Enter the paradise and have fun");
         visitPackage=new BaseDecorator(visitPackage);

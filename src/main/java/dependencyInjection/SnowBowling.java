@@ -1,6 +1,8 @@
 package dependencyInjection;
 
-//雪上保龄球
+/**
+ * @author Nam
+ */
 public class SnowBowling extends Amusement {
     @Override
     public String getName() {

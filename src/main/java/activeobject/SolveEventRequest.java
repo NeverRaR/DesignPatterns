@@ -1,5 +1,8 @@
 package activeobject;
 
+/**
+ * @author  NeverRaR
+ */
 public class SolveEventRequest extends MethodRequest {
     private final String message;
     public SolveEventRequest(Servant servant,FutureResult future,String message){
@@ -7,6 +10,9 @@ public class SolveEventRequest extends MethodRequest {
         this.message=message;
     }
 
+    /**
+     * 执行SolveEventRequest
+     */
     @Override
     public void execute() {
         Result result=servant.solveEvent(message);

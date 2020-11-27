@@ -4,30 +4,49 @@ import nullobject.Ticket;
 import nullobject.NullTicket;
 import nullobject.ValidTicket;
 
+/**
+ * @author Nam
+ */
 public class TicketOffice {
     private Tourists tourist_1 = new Tourists();
     private Child child_1 = new Child();
 
-
+    /**
+     * Adult ticket.
+     * @param year:the age of the ticket buyer.
+     */
     private void adultTicket(String year){
         this.tourist_1.buyticket(year);
-    }//成人票
+    }
+
+    /**
+     * Child ticket.
+     * @param year:the age of the ticket buyer.
+     */
     private void childTicket(String year){
         this.child_1.buyticket(year);
-    }//儿童票
+    }
 
-    public Ticket getYear(String ID,String customerID,String year){//制作蛋糕返回蛋糕实例
-        System.out.println("("+this.toString()+") : ");
+    /**
+     * Buy a ticket
+     * @param ID:the tourist ID
+     * @param customerID:the customer ID
+     * @param year:the age of the tourist
+     * @return ticket message
+     */
+
+    public Ticket getYear(String ID,String customerID,String year){
+        System.out.println("("+this.toString()+") : "+"getYear: delegate ticket office processing ticket information.");
         Ticket ticket;
         switch (year){
-            case "adult"://成人票
+            case "adult":
                 ticket = new ValidTicket(ID,customerID,year);
                 this.adultTicket(year);
                 ticket.buy();
                 System.out.println("");
                 break;
 
-            case "child"://儿童票
+            case "child":
                 ticket = new ValidTicket(ID,customerID,year);
                 this.childTicket(year);
                 ticket.buy();

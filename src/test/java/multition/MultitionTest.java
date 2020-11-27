@@ -1,12 +1,14 @@
 package multition;
 
+import junit.framework.TestCase;
 import org.junit.Test;
+
 /**
  * @author 1851594王思桐
  */
-public class MultitionTest {
+public class MultitionTest extends TestCase  {
     @Test
-    public  void main() {
+    public  void test() {
         System.out.println("Multition Test:");
 
         for(int i = 0;i<5;i++){

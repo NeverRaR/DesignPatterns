@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * A Selector defined as the disjunction (OR) of other (leaf) selectors.
+ * @author nemo
  */
 public class DisjunctionSelector<T> extends AbstractSelector<T> {
 

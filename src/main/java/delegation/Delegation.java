@@ -1,5 +1,8 @@
 package delegation;
 
+/**
+ * @author Nam
+ */
 public class Delegation {
     public static void main(String args[]){
         TicketOffice ticketOffice = new TicketOffice();

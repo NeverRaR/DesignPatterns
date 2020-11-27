@@ -1,19 +1,20 @@
 package dirtyflag;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ElectronicUpdateTest {
+public class ElectronicUpdateTest extends TestCase {
     @Test
     public void test(){
         System.out.println("(" + this.toString() + ") : " + "Testing Dirty Flag");
         ElectronicMenu menu = new ElectronicMenu();
-        System.out.println("(" + this.toString() + ") : " + "第一次访问");
+        System.out.println("(" + this.toString() + ") : " + "First time: Get Menu");
         menu.show();
-        System.out.println("(" + this.toString() + ") : " + "第二次访问");
+        System.out.println("(" + this.toString() + ") : " + "Second time: Get Menu");
         menu.show();
-        System.out.println("(" + this.toString() + ") : " + "数据变更");
+        System.out.println("(" + this.toString() + ") : " + "MenuChange!");
         menu.menuChange();
-        System.out.println("(" + this.toString() + ") : " + "第三次访问");
+        System.out.println("(" + this.toString() + ") : " + "Third time: Get Menu");
         menu.show();
     }
 }

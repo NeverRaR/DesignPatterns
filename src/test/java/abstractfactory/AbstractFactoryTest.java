@@ -1,11 +1,12 @@
 package abstractfactory;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FacilityFactoryTest {
+public class AbstractFactoryTest extends TestCase {
 
     @Test
-    public void main(){
+    public void test(){
         System.out.println("Test abstract factory:");
         FacilityFactory factory;
         System.out.println("Use PolarBear Style Facility:");

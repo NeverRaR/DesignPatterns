@@ -1,13 +1,15 @@
 package factory;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class FactoryTest {
+public class FactoryTest extends TestCase {
+
     @Test
-    public void main() {
-        System.out.println("Test factory:");
+    public void test() {
+        System.out.println("Test factory pattern:");
         BuildFacility buildFacility = new BuildFacility();
-        //新建设施
+        //build new facility, can be changed
         Facility iceRink = buildFacility.build("ice rink");
         if(iceRink != null) {
             iceRink.build();
