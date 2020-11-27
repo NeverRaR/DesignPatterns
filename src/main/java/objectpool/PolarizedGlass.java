@@ -3,6 +3,7 @@ package objectpool;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * @author nemo
  * PolarizedGlass are expensive to create.
  */
 public class PolarizedGlass {
@@ -32,4 +33,3 @@ public class PolarizedGlass {
         return String.format("PolarizedGlass id = %d", id);
     }
 }
-

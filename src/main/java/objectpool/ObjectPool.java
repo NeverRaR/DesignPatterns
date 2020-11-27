@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * @author nemo
  * Generic object pool.
  *
  * @param <T> Type T of Object in the Pool
@@ -39,6 +40,10 @@ public abstract class ObjectPool<T> {
 
     @Override
     public synchronized String toString() {
-        return String.format("Pool available = %d inUse = %d", available.size(), inUse.size());
+        return String.format(
+            "Pool available = %d inUse = %d",
+            available.size(),
+            inUse.size()
+        );
     }
 }

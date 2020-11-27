@@ -1,12 +1,13 @@
 package objectpool;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import org.junit.Test;
 import objectpool.*;
+import org.junit.Test;
 
+/**
+ * @author nemo
+ */
 public class ObjectPoolTest {
+
     @Test
     public void main() {
         System.out.println("Test object pool:");

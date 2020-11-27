@@ -1,6 +1,7 @@
 package objectpool;
 
 /**
+ * @author nemo
  * PolarizedGlass object pool.
  */
 public class PolarizedGlassPool extends ObjectPool<PolarizedGlass> {
@@ -10,4 +11,3 @@ public class PolarizedGlassPool extends ObjectPool<PolarizedGlass> {
         return new PolarizedGlass();
     }
 }
-
