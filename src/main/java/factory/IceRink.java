@@ -10,6 +10,6 @@ public class IceRink implements Facility {
      * let ice rink be built
      */
     public void build() {
-        System.out.println("IceRink: build: An area of ice rink is under construction");
+        System.out.println("IceRink: (" + hashCode() + "): build: An area of ice rink is under construction");
     }
 }

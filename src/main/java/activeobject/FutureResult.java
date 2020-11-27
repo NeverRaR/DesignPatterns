@@ -8,9 +8,9 @@ public class FutureResult extends Result {
     private boolean ready=false;
 
     /**
-     *设置实际上的处理结果，设置ready标记并唤醒所有因等待结果而被阻塞的线程
+     * set the real result, and set "ready" flag and wake up all threads that are blocked due to waiting for the result
      * @param result
-     * 实际结果
+     * real result
      */
     public synchronized void setResult(Result result){
          this.result=result;
@@ -19,9 +19,9 @@ public class FutureResult extends Result {
     }
 
     /**
-     * 获取实际上的结果，如果结果未准备完毕，则阻塞线程
+     * get the real result, and block the thread if the result is not produced
      * @return
-     * 实际结果
+     * real result
      */
     public synchronized Object getResultValue(){
         while(!ready){

@@ -5,7 +5,7 @@ package abstractfactory;
  */
 public interface RollerCoaster {
     /**
-     * 游玩过山车
+     * play roller coaster
      */
     void play();
 }

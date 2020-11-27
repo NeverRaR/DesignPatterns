@@ -23,7 +23,7 @@ public class BuildFacility {
         else if(name == "cable car") {
             return new CableCar();
         }
-        System.out.println("BuildFacility: This kind of facility does not supported to be built now");
+        System.out.println("BuildFacility: (" + hashCode() + "): This kind of facility does not supported to be built now");
         return null;
     }
 }

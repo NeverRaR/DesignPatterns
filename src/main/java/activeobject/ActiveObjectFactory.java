@@ -5,9 +5,9 @@ package activeobject;
  */
 public class ActiveObjectFactory {
     /**
-     * 创建一个主动对象
+     * create an active object
      * @return
-     * 主动对象
+     * an active object
      */
     public static ActiveObject createActiveObject(){
         Servant servant=new Servant();

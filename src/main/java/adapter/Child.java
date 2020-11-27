@@ -15,9 +15,9 @@ public class Child {
     }
 
     /**
-     * 设置孩子身高
+     * get child's height
      * @return
-     * 身高
+     * height
      */
     public double getChildHeight() {
         return childHeight;

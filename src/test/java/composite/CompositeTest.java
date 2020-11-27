@@ -21,11 +21,11 @@ public class CompositeTest extends TestCase {
         manager2.add(staff2);
         CEO.remove(manager1);                    //just for different situations test
         //only three levels, then just use two for loop to print the list
-        System.out.println("CompositeTest: " + CEO);
+        System.out.println("CompositeTest: (" + hashCode() + "): " + CEO);
         for (Employee emp : CEO.getEmployeeList()) {
-            System.out.println("CompositeTest: " + emp);
+            System.out.println("CompositeTest: (" + hashCode() + "): " + emp);
             for (Employee employee : emp.getEmployeeList()) {
-                System.out.println("CompositeTest: " + employee);
+                System.out.println("CompositeTest: (" + hashCode() + "): " + employee);
             }
         }
     }

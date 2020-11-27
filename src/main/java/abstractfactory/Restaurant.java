@@ -5,7 +5,7 @@ package abstractfactory;
  */
 public interface Restaurant {
     /**
-     * 在餐馆就餐
+     * have a meal in restaurant
      */
     void eat();
 }

@@ -2,7 +2,7 @@ package featuretoggle.player;
 
 /*
  *
- * 滑雪游客类
+ * class of ski player
  * */
 public class Player {
     private String name;

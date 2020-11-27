@@ -37,10 +37,10 @@ public abstract class ComplaintHandler {
      */
     public void printHandleResult(String type, boolean handled) {
         if (handled == true) {
-            System.out.println("ComplaintHandler: printHandleResult: " + type + " has been handled now");
+            System.out.println("ComplaintHandler: (" + hashCode() + "): printHandleResult: " + type + " has been handled now");
         }
         if (handled == false) {
-            System.out.println("ComplaintHandler: printHandleResult: Complaint cannot be handled now");
+            System.out.println("ComplaintHandler: (" + hashCode() + "): printHandleResult: Complaint cannot be handled now");
         }
     }
 }

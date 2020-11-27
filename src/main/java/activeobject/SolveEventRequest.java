@@ -11,7 +11,7 @@ public class SolveEventRequest extends MethodRequest {
     }
 
     /**
-     * 执行SolveEventRequest
+     * execute "SolveEventRequest"
      */
     @Override
     public void execute() {

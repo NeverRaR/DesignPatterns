@@ -12,10 +12,10 @@ public class Servant implements ActiveObject{
     /**
      *
      * @param message
-     * 投诉信息
+     * message of complaint
      *
      * @return
-     * 解决结果
+     * solve result
      */
     @Override
     public Result solveEvent(String message) {
@@ -23,7 +23,7 @@ public class Servant implements ActiveObject{
         String solveResult = "";
         try {
             Thread.sleep(100);
-            if (ThreadLocalRandom.current().nextDouble() < 0.3) solveResult = "refused";//拒绝处理该投诉
+            if (ThreadLocalRandom.current().nextDouble() < 0.3) solveResult = "refused";//refuse to solve
             else solveResult = "solved";
         }
         catch (InterruptedException e){
@@ -33,7 +33,7 @@ public class Servant implements ActiveObject{
     }
 
     /**
-     * Servant不持有线程，kill为空
+     * "Servant" does not have thread, "kill" is null
      */
     @Override
     public void kill() {
