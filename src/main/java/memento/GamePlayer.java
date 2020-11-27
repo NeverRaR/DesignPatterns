@@ -44,7 +44,7 @@ class GamePlayer {
             }
             a+="\n";
         }
-        return this+":"+"showMap():\n"+a;
+        return "GamePlayer:("+this.hashCode()+"):showBoard():\n"+a;
     }
 
     /**

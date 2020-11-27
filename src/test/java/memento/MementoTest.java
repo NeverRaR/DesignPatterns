@@ -33,7 +33,7 @@ public class MementoTest extends TestCase {
 
         /**
          * Restart the gamePlayer to have another match
-         * instead of delete the player and new anotherone .
+         * instead of delete the player and new another one .
          */
         gamePlayer.restart();
 

@@ -27,6 +27,6 @@ public class Stub {
      * @return info:String,stitched together from instance information and ID
      */
     public String getInfo() {
-        return this+":getInfo():"+ID;
+        return "Stub:("+this.hashCode()+"):getInfo():"+ID;
     }
 }

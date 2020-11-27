@@ -12,7 +12,7 @@ class ProhibitEquipment implements Handler<Equipment, Equipment>{
         if(input.isInUse()){
             input.setIsInUse(false);
         }
-        System.out.println("\t"+this+":\n\tProhibit: "+input.toString());
+        System.out.println("\tProhibitEquipment:("+this.hashCode()+"):\n\tProhibit: "+input.toString());
         return input;
     }
 }
