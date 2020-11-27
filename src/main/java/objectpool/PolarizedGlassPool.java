@@ -1,7 +1,7 @@
 package objectpool;
 
 /**
- * Oliphaunt object pool.
+ * PolarizedGlass object pool.
  */
 public class PolarizedGlassPool extends ObjectPool<PolarizedGlass> {
 

@@ -28,6 +28,10 @@ public abstract class ObjectPool<T> {
         return instance;
     }
 
+    /**
+     * CheckIN object from pool.
+     */
+
     public synchronized void checkIn(T instance) {
         inUse.remove(instance);
         available.add(instance);
@@ -35,6 +39,6 @@ public abstract class ObjectPool<T> {
 
     @Override
     public synchronized String toString() {
-        return String.format("Pool available=%d inUse=%d", available.size(), inUse.size());
+        return String.format("Pool available = %d inUse = %d", available.size(), inUse.size());
     }
 }

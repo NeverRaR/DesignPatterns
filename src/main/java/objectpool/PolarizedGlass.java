@@ -29,7 +29,7 @@ public class PolarizedGlass {
 
     @Override
     public String toString() {
-        return String.format("PolarizedGlass id=%d", id);
+        return String.format("PolarizedGlass id = %d", id);
     }
 }
 
