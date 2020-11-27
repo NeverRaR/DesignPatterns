@@ -10,7 +10,7 @@ public class NullTicket implements Ticket{
      */
     @Override
     public String getInfo() {
-        return this+":getInfo():"+"Invalid Ticket!";
+        return "NullTicket:("+this.hashCode()+"):getInfo():"+"Invalid Ticket!";
     }
 
     /**

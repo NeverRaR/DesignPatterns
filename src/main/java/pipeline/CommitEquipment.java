@@ -12,7 +12,7 @@ class CommitEquipment implements Handler<Equipment,Equipment>{
         if(input.getProblems().size() == 0){
             input.setIsInUse(true);
         }
-        System.out.println("\t"+this+":\n\tCommit: "+input.toString());
+        System.out.println("\tCommitEquipment:("+this.hashCode()+"):\n\tCommit: "+input.toString());
         return input;
     }
 }
