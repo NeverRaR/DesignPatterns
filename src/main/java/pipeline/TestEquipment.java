@@ -19,7 +19,7 @@ class TestEquipment implements Handler<Equipment,Equipment> {
                 input.deleteProblem(i);
             }
         }
-        System.out.println("\t"+this+":\n\tTest: "+input.toString());
+        System.out.println("\tTestEquipment:("+this.hashCode()+"):\n\tTest: "+input.toString());
         return input;
     }
 }

@@ -1,5 +1,8 @@
 package activeobject;
 
+/**
+ * @author  NeverRaR
+ */
 public abstract class MethodRequest {
     protected final Servant servant;
     protected final FutureResult future;
@@ -7,5 +10,10 @@ public abstract class MethodRequest {
          this.servant=servant;
          this.future=future;
     }
+
+    /**
+     * 执行请求
+     */
     public abstract void execute();
-}
+
+};

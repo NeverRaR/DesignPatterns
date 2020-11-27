@@ -4,14 +4,15 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class CommandTest extends TestCase {
+
     @Test
     public void test() {
-        System.out.println("Test command:");
-        //下命令
+        System.out.println("Test command pattern:");
+        //give command, can change content and order of command
         Command command = new Command();
         PutUp up = new PutUp(command);
         PutDown down = new PutDown(command);
-        //执行命令
+        //execute command
         Operator operator = new Operator();
         operator.takeCommand(up);
         operator.takeCommand(down);

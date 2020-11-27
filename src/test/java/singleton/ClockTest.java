@@ -1,10 +1,11 @@
 package singleton;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ClockTest {
+public class ClockTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         Clock clockOutsideTheParadise = Clock.getClock();
         Clock clockAtTheTicketCounter = Clock.getClock();
         Clock clockInTheRestaurant = Clock.getClock();

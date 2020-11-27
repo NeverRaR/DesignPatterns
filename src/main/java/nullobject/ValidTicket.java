@@ -33,11 +33,11 @@ public class ValidTicket implements Ticket{
      */
     @Override
     public String getInfo() {
-        return this + ":getInfo():" + ID;
+        return "ValidTicket:("+this.hashCode() + "):getInfo():" + ID;
     }
     @Override
     public void buy() {
-        System.out.println("The visitor " + ID +" is a "+year);
+        System.out.println("buy: The visitor " + ID +" is a "+year);
     }
 
     @Override

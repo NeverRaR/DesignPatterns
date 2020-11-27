@@ -18,7 +18,7 @@ class ExaminEquipment implements Handler<Equipment,Equipment> {
             Equipment.Problem defaultProblem = input.new Problem("Problem"+i);
             input.addProblem(defaultProblem);
         }
-        System.out.println("\t"+this+":\n\tExamine: "+input.toString());
+        System.out.println("\tExamineEquipment:("+this.hashCode()+"):\n\tExamine: "+input.toString());
         return input;
     }
 }

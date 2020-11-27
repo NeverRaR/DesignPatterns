@@ -2,18 +2,26 @@ package dto;
 
 import java.sql.Timestamp;
 
+/**
+ * author Nam
+ */
 public class Preprocessing {
 
     private Skier skier;
 
-    //分给滑雪者
+    /**
+     * Distribute tools to skiers
+     */
     void establishPipe(Skier newSkier){
         skier = newSkier;
     }
 
-    //进行处理，传入预处理处
+    /**
+     * Processing,and pass to pre-processing.
+     * @param orderedBy : String,orders placed by skiers to buy ski equipment.
+     * @param tool : Ski equipment.
+     */
     void preprocess(String orderedBy, Tools... tool){
-        //making package
         System.out.println("(" + this.toString() + ") : " + "Got order from: " + orderedBy);
         System.out.println("(" + this.toString() + ") : " + "Start Packaging and Preprocessing");
         SkitoolPackage pack = new SkitoolPackage();
@@ -21,12 +29,16 @@ public class Preprocessing {
         for (Tools theTool: tool){
             pack.pushTool(theTool);
         }
-        System.out.println("(" + this.toString() + ") : " + "get tools: \n" + pack.ingredientToString());
-        //add timestamp
+        System.out.println("(" + this.toString() + ") : " + "get tools: \n" + pack.toolsToString());
         pack.setPreprocessedTime(new Timestamp(System.currentTimeMillis()));
         sendPackage(skier, pack);
     }
-    //递送打包好的对象
+
+    /**
+     * Deliver Packaged Objects.
+     * @param newSkier : Skiers who placed an order.
+     * @param pack : The ski tool Package received by skier.
+     */
     private void sendPackage(Skier newSkier, SkitoolPackage pack){
         skier.receiveFoodPackage(pack);
     }

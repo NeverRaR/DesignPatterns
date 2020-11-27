@@ -15,7 +15,6 @@ public class AdapterTest extends TestCase {
         Chair chair=new Chair();
         System.out.println("A man sit:");
         chair.sit(man);
-        //chair.sit(boy);
         ChildAdapter boyAdapter=new ChildAdapter(boy);
         ChildAdapter littleBoyAdapter=new ChildAdapter(littleBoy);
         System.out.println("A boy sit:");

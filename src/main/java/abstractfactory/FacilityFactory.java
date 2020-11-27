@@ -1,5 +1,8 @@
 package abstractfactory;
 
+/**
+ * @author  NeverRaR
+ */
 public interface FacilityFactory {
 
     /**

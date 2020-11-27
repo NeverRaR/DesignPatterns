@@ -1,11 +1,12 @@
 package iterator;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class TouristTest {
+public class TouristTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         TouristsInLine line = new TouristsInLine();
         System.out.println("\n1# Iteration Test");
         TouristInLineIterator adultsIterator = line.iterator(TouristType.ADULTS);

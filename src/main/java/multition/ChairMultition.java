@@ -27,6 +27,6 @@ public final class ChairMultition {
         return chairIndex;
     }
     public String getInfo(){
-        return this+":ChairIndex:"+chairIndex;
+        return "ChairMultition:("+this.hashCode()+"):getIndex():"+chairIndex;
     }
 }

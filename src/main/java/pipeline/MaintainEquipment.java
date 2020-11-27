@@ -13,7 +13,7 @@ class MaintainEquipment implements Handler<Equipment,Equipment>{
              ) {
             pr.fix();
         }
-        System.out.println("\t"+this+":\n\tMaintain: "+input.toString());
+        System.out.println("\tMaintainEquipment:("+this.hashCode()+"):\n\tMaintain: "+input.toString());
         return input;
     }
 }

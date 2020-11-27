@@ -1,11 +1,14 @@
 package balking;
 
 
+/**
+ * @author  NeverRaR
+ */
 public class WaiterThread extends Thread{
-    private Customer customer;
-    public WaiterThread(String name,Customer customer){
+    private Bill bill;
+    public WaiterThread(String name, Bill bill){
         super(name);
-        this.customer=customer;
+        this.bill = bill;
 
     }
 
@@ -15,7 +18,7 @@ public class WaiterThread extends Thread{
             int i=0;
             for(i=0;i<15;++i){
                 sleep(1000);//1s询问一次
-                customer.order();//询问顾客点单
+                bill.order();//询问顾客点单
             }
         }
         catch (Exception e){

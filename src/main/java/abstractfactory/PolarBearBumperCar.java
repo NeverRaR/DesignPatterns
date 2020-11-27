@@ -1,8 +1,11 @@
 package abstractfactory;
 
+/**
+ * @author  NeverRaR
+ */
 public class PolarBearBumperCar implements BumperCar {
 
     public void play() {
-        System.out.println("You are playing PolarBear BumperCar!");
+        System.out.println("PolarBearBumperCar:("+hashCode()+"):play:"+"You are playing PolarBear BumperCar!");
     }
 }
