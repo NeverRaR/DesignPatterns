@@ -10,7 +10,7 @@ public class InterpreterTest extends TestCase {
         String[] str = {"KCKL", "2", "NMC", "1", "KQS", "3"};
         Context context = new Context(str);
         Node Interpreter = new ExpressionNode();
-        Interpreter.Interpret(context);
-        Interpreter.Execute();
+        Interpreter.interpret(context);
+        Interpreter.execute();
     }
 }

@@ -11,7 +11,7 @@ public class DrinkNode extends Node{
      * @param context
      */
     @Override
-    public void Interpret(Context context) {
+    public void interpret(Context context) {
         if(context.getCurToken()=="KCKL"){
             drinkName = "Cola";
             unitPrice = 3;
@@ -31,7 +31,7 @@ public class DrinkNode extends Node{
      * execute the total price of the drink
      */
     @Override
-    public void Execute() {
+    public void execute() {
 
         System.out.println("(" + this.toString() + ") : " + drinkName + "    " + "Quantity： " + num + "    Total price： " + num * unitPrice + "\n");
     }
