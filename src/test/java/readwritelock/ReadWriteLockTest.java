@@ -1,29 +1,36 @@
 package readwritelock;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ReadWriteLockTest {
+public class ReadWriteLockTest extends TestCase{
 
     @Test
-    public void main() {
-        System.out.println("正在使用读写锁模式:");
+    public void test() {
+        System.out.println("ReadWriteLockTest:");
 
-        Film film = new Film("《冰雪奇缘》");
-        ViewerThread viewer1= new ViewerThread(film);
-        ViewerThread viewer2= new ViewerThread(film);
-        ViewerThread viewer3= new ViewerThread(film);
-        viewer1.setName("观众1");
-        viewer2.setName("观众2");
-        viewer3.setName("观众3");
+        System.out.println("Creating Film object...");
+        Film film = new Film("《Frozen》");
+        System.out.println();
+
+        System.out.println("Creating audienceThread object...");
+        AudienceThread audience1= new AudienceThread(film,"audience1");
+        AudienceThread audience2= new AudienceThread(film,"audience2");
+        AudienceThread audience3= new AudienceThread(film,"audience3");
+        System.out.println();
+
+        System.out.println("Creating repairmanThread object...");
         RepairManThread repairMan= new RepairManThread(film);
-        viewer1.start();
-        viewer2.start();
-        viewer3.start();
+        System.out.println();
+
+        audience1.start();
+        audience2.start();
+        audience3.start();
         repairMan.start();
         try {
-            viewer1.join();
-            viewer2.join();
-            viewer3.join();
+            audience1.join();
+            audience2.join();
+            audience3.join();
             repairMan.join();
         }
         catch ( InterruptedException e){

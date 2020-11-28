@@ -1,10 +1,11 @@
 package immutable;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ImmutableTest {
+public class ImmutableTest extends TestCase {
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test Immutable: ");
         Building building = new Building("Ice Restaurant", "E2-12");
         BuildingInfo info = new BuildingInfo(building, 25);

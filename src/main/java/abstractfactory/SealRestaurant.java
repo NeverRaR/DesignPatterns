@@ -1,7 +1,10 @@
 package abstractfactory;
 
+/**
+ * @author  NeverRaR
+ */
 public class SealRestaurant implements Restaurant {
     public void eat() {
-        System.out.println("You are eating in Seal Restaurant!");
+        System.out.println("SealRestaurant:("+hashCode()+"):eat:"+"You are eating in Seal Restaurant!");
     }
 }

@@ -4,8 +4,8 @@ import featuretoggle.player.Player;
 import featuretoggle.player.PlayerGroup;
 
 /**
- * 根据游客选择的赛道种类，提供不同的额外功能
- * 下面通过实现一个显示简单的欢迎信息的方法作为例子
+ * provide different additional functions according to the type of track selected by tourists
+ * below is an example of how to display a simple welcome message
  */
 public class FeatureToggle implements SkiingService {
 

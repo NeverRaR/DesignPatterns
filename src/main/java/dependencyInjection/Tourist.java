@@ -1,8 +1,10 @@
 package dependencyInjection;
 
+/**
+ * @author Nam
+ */
 public class Tourist {
-    // 依赖注入
     public void tourist(Amusement amusement) {
-        System.out.println("(" + this.toString() + "):" +"游玩 " + amusement.getName());
+        System.out.println("(" + this.toString() + "):" +"tourist: The tourist plays " + amusement.getName() + ".");
     }
 }

@@ -2,11 +2,14 @@ package balking;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * @author  NeverRaR
+ */
 public class CustomerThread extends Thread{
-    private Customer customer;
-    public CustomerThread(String name,Customer customer){
+    private Bill bill;
+    public CustomerThread(String name, Bill bill){
         super(name);
-        this.customer=customer;
+        this.bill = bill;
 
     }
 
@@ -16,9 +19,9 @@ public class CustomerThread extends Thread{
             int i=0;
             for(i=0;i<30;++i){
                 double extraDish=ThreadLocalRandom.current().nextDouble(200);
-                customer.addDish(extraDish);
-                sleep(ThreadLocalRandom.current().nextInt(1000));//进餐或者思考
-                customer.order();//顾客主动要求点单
+                bill.addDish(extraDish);
+                sleep(ThreadLocalRandom.current().nextInt(1000));//having a meal or thinking
+                bill.order();//customers take the initiative to order
             }
         }
         catch (Exception e){

@@ -1,5 +1,8 @@
 package activeobject;
 
+/**
+ * @author  NeverRaR
+ */
 public class SchedulerThread extends Thread {
     private  final ActivationQueue queue;
     private  boolean dead=false;
@@ -7,15 +10,23 @@ public class SchedulerThread extends Thread {
         this.queue=queue;
     }
 
+    /**
+     * create a function call
+     * @param request
+     * request for function call
+     */
     public void invoke(MethodRequest request){
         if(isDead()) return;
         queue.putRequest(request);
     }
 
-    public void setDead(){//主动对象停止接受请求
+    /**
+     * set "SchedulerThread" dead
+     */
+    public void setDead(){//active object stops receiving request
         if(isDead()) return;
         this.dead=true;
-        queue.putRequest(new NullMethodRequest());//放入空请求唤醒线程
+        queue.putRequest(new NullMethodRequest());//put an empty request to wake up thread
     }
     public void run(){
         while(true){
@@ -27,6 +38,12 @@ public class SchedulerThread extends Thread {
         }
     }
 
+    /**
+     *
+     * judge whether "SchedulerThread" is dead or not
+     * @return
+     * dead or not
+     */
     public boolean isDead() {
         return dead;
     }

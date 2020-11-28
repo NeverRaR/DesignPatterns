@@ -6,11 +6,14 @@ class MaintainEquipment implements Handler<Equipment,Equipment>{
         if(input==null){
             return null;
         }
+        /**
+         * try to fix all problems with the equipment.
+         */
         for (Equipment.Problem pr:input.getProblems()
              ) {
             pr.fix();
         }
-        System.out.println("Maintain: "+input.toString());
+        System.out.println("\tMaintainEquipment:("+this.hashCode()+"):\n\tMaintain: "+input.toString());
         return input;
     }
 }

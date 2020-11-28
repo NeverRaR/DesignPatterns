@@ -1,7 +1,9 @@
 package delegation;
 
+/**
+ * @author Nam
+ */
 public interface BuyTicket {
-    //买票
     public abstract void buyticket(String ticket);
 }
 

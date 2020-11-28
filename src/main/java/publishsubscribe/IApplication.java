@@ -1,10 +1,14 @@
 package publishsubscribe;
 
+/**
+ * @author 1754025徐菡志
+ */
+
 public interface IApplication {
 
-    public String subscribe(Entertainment entertainment, Vistor vistor);
+    public void subscribe(Entertainment entertainment, Visitor vistor);
 
-    public String unsubscribe(Entertainment entertainment, Vistor vistor);
+    public void unsubscribe(Entertainment entertainment, Visitor vistor);
 
     public void publish(Entertainment entertainment, Information info);
 }

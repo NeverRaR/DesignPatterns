@@ -1,6 +1,11 @@
 package proxy;
 
+/**
+ * @author 1754025徐菡志
+ */
+
 public interface IFinanceManager {
 
-    void manageFinance();//管理财务工作方法
+    void manageFinance();
+
 }

@@ -4,13 +4,19 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 
+/**
+ * @author Nam
+ */
 public class SkitoolPackage {
     private ArrayList<Tools> tools = new ArrayList<>();
     private String orderedBy;
     private Timestamp preprocessedTime;
 
-    //将滑雪用具进行格式化输出
-    public String ingredientToString() {
+    /**
+     * Formatting Ski Tools for Export
+     * @return The information of the ski tools
+     */
+    public String toolsToString() {
         StringBuilder builder = new StringBuilder();
         for (Tools theTool: tools){
             builder.append("Skitool Name: ").append(theTool.name).append("; Price: ").append(theTool.price)
@@ -27,7 +33,12 @@ public class SkitoolPackage {
         return tools;
     }
 
-    //获得指定用具
+    /**
+     * Obtain specified appliances.
+     * @param index:
+     * @return tools if get any tool
+     *         null if get a non-existing tool
+     */
     Tools getTool(int index){
         if (index >= 0 && index < tools.size()){
             return tools.get(index);

@@ -6,10 +6,13 @@ class ProhibitEquipment implements Handler<Equipment, Equipment>{
         if(input==null){
             return null;
         }
+        /**
+         * set the equipment not in use to examine and repair.
+         */
         if(input.isInUse()){
             input.setIsInUse(false);
         }
-        System.out.println("Prohibit: "+input.toString());
+        System.out.println("\tProhibitEquipment:("+this.hashCode()+"):\n\tProhibit: "+input.toString());
         return input;
     }
 }

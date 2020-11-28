@@ -2,6 +2,9 @@ package activeobject;
 
 import java.util.Date;
 
+/**
+ * @author  NeverRaR
+ */
 public class SolveEventThread extends Thread{
     private final ActiveObject activeObject;
     private final NotifyThread notifyThread;
@@ -19,7 +22,6 @@ public class SolveEventThread extends Thread{
         try {
             notifyThread.start();
             for (int i = 1; i < callCount + 1; i++) {
-                System.out.println(new Date() + " " + Thread.currentThread().getName() + " calls solve event" + i);
                 Result result = activeObject.solveEvent("Event" + i);
                 notifyThread.putResult(result);
             }

@@ -1,11 +1,12 @@
 package mediator;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class MediatorTest {
+public class MediatorTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         GroupMember son = new Son("Jack");
         GroupMember son2 = new Son("Sam");
         GroupMember mother = new Mother("Alice");

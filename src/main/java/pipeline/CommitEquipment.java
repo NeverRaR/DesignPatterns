@@ -6,10 +6,13 @@ class CommitEquipment implements Handler<Equipment,Equipment>{
         if(input==null){
             return null;
         }
+        /**
+         * if an equipment has no problem commit and restart it.
+         */
         if(input.getProblems().size() == 0){
             input.setIsInUse(true);
         }
-        System.out.println("Commit: "+input.toString());
+        System.out.println("\tCommitEquipment:("+this.hashCode()+"):\n\tCommit: "+input.toString());
         return input;
     }
 }

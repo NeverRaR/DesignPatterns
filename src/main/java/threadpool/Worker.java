@@ -23,7 +23,7 @@ public class Worker implements Runnable {
     public void run() {
         System.out.println(
             String.format(
-                "%s processing %s",
+                "(" + this.toString() + "): " + "%s processing %s",
                 Thread.currentThread().getName(),
                 task.toString()
             )

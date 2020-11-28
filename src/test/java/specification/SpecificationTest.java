@@ -1,19 +1,23 @@
 package specification;
 
 import java.util.ArrayList;
+
+import junit.framework.TestCase;
+import org.junit.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.Test;
 import specification.facility.*;
 import specification.selector.*;
 
+
 /**
  * @author nemo
  */
-public class SpecificationTest {
+public class SpecificationTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test specification:");
         System.out.println("Initializing facilities...");
         List<Facility> facilityList = new ArrayList<>();
@@ -63,13 +67,13 @@ public class SpecificationTest {
         System.out.println(
             "Sorting out facilities which is OUTDOOR and suitable for KIDS..."
         );
-        List<Facility> ourdoorTweenFacilityList = facilityList
+        List<Facility> outdoorTweenFacilityList = facilityList
             .stream()
             .filter(new FacilityTypeSelector(FacilityType.OUTDOOR))
             .filter(new FacilitySuitableAgeSelector(FacilitySuitableAge.KIDS))
             .collect(Collectors.toList());
         System.out.println("OUTDOOR and suitable for KIDS facilities:");
-        ourdoorTweenFacilityList.forEach(
+        outdoorTweenFacilityList.forEach(
             facility ->
                 System.out.println(
                     facility.getName() +

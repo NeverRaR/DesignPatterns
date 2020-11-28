@@ -3,10 +3,17 @@ package dataaccessobject;
 import java.io.*;
 import java.util.Base64;
 
+/**
+ * Implementation of the CustomerDao interface
+ */
 public class CustomerDaoImpl implements CustomerDao{
 
     private String filePath = new String("./Customer.dat");
 
+    /**
+     * get customer information from file system
+     * @return Customer
+     */
     @Override
     public Customer getCustomer() {
         try{
@@ -17,6 +24,7 @@ public class CustomerDaoImpl implements CustomerDao{
             in.close();
             String str = new String(buffer, "UTF-8");
             Customer cus = (Customer)fromString(str);
+            System.out.println("("+this.toString()+") : "+"Get customer data from local file system");
             return cus;
         } catch (ClassNotFoundException|IOException e) {
             return null;
@@ -24,7 +32,11 @@ public class CustomerDaoImpl implements CustomerDao{
 
     }
 
-
+    /**
+     * update customer information to given file
+     * @param customer the given customer information
+     * @return
+     */
     @Override
     public boolean updateCustomer(Customer customer) {
         try {
@@ -32,7 +44,7 @@ public class CustomerDaoImpl implements CustomerDao{
             FileOutputStream fileOut = new FileOutputStream(filePath);
             fileOut.write(str.getBytes());
             fileOut.close();
-            System.out.println("Customer data is saved");
+            System.out.println("("+ this.toString() + ") : " + "Customer data is saved to local file system");
         } catch (IOException e) {
             return false;
         }

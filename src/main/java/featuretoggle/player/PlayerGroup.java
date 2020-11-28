@@ -4,17 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 用户选择赛道模式，包含障碍模式和竞速模式，选择后特定的用户组只能在对应赛道游玩
+ * player choose the track mode, including slalom mode and racing mode
+ * after selection, specific player group can only play in the corresponding track
  */
 public class PlayerGroup {
     private static List<Player> slalomGroup = new ArrayList<>();
     private static List<Player> raceGroup = new ArrayList<>();
 
     /**
-     * 将玩家添加到免费组中
+     * Add player to free group
      *
-     * @param player 传入用户
-     * @throws IllegalArgumentException 当用户在障碍赛道中已经存在抛出异常
+     * @param player
+     * @throws IllegalArgumentException throw exception when the player already exists in the slalom track
      */
     public static void addPlayerToRaceGroup(final Player player) throws IllegalArgumentException {
         if (slalomGroup.contains(player)) {
@@ -27,10 +28,10 @@ public class PlayerGroup {
     }
 
     /**
-     * 将玩家添加到障碍赛道
+     * add player to slalom track
      *
-     * @param player 添加用户
-     * @throws IllegalArgumentException 当用户在竞速赛道中已经存在抛出异常
+     * @param player add player
+     * @throws IllegalArgumentException throw exception when the player already exists in the racing track
      */
     public static void addPlayerToSlalomGroup(final Player player) throws IllegalArgumentException {
         if (raceGroup.contains(player)) {
@@ -43,8 +44,8 @@ public class PlayerGroup {
     }
 
     /**
-     * @param player 传入用户
-     * @return 若是劲速赛道玩家返回true，否则返回false
+     * @param player
+     * @return true when the player is on racing track，otherwise return false
      */
     public static boolean isRaceGroup(Player player) {
         return raceGroup.contains(player);
