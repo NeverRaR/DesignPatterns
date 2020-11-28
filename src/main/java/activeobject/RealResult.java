@@ -10,9 +10,9 @@ public class RealResult extends Result{
     }
 
     /**
-     * 返回结果
+     * return result
      * @return
-     * 结果
+     * result
      */
     @Override
     public Object getResultValue() {

@@ -17,9 +17,9 @@ public class NotifyThread extends Thread{
     }
 
     /**
-     * 向通知线程放入结果
+     * put a result into notify thread
      * @param result
-     * 放入的结果
+     * result to be put into
      */
     public void putResult(Result result){
         if(result==null) return;

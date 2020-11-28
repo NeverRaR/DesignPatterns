@@ -14,13 +14,13 @@ public class Proxy implements ActiveObject{
     }
 
     /**
-     * 将方法调用转化为对应的MethodRequest并交由scheduler调度
+     * convert the called function into corresponding "MethodRequest" and send to "scheduler"
      *
      * @param message
-     * 投诉信息
+     * message of complaint
      *
      * @return
-     * 解决结果
+     * solve result
      */
     @Override
     public Result solveEvent(String message) {
@@ -31,7 +31,7 @@ public class Proxy implements ActiveObject{
     }
 
     /**
-     * 结束该主动对象
+     * end the active object
      */
     @Override
     public void kill(){

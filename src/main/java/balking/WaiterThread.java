@@ -17,8 +17,8 @@ public class WaiterThread extends Thread{
         try{
             int i=0;
             for(i=0;i<15;++i){
-                sleep(1000);//1s询问一次
-                bill.order();//询问顾客点单
+                sleep(1000);//Ask once a second
+                bill.order();//Ask customer to order
             }
         }
         catch (Exception e){

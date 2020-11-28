@@ -10,6 +10,6 @@ public class SkiField implements Facility {
      * let ski field be built
      */
     public void build() {
-        System.out.println("SkiField: build: An area of ski field is under construction");
+        System.out.println("SkiField: (" + hashCode() + "): build: An area of ski field is under construction");
     }
 }

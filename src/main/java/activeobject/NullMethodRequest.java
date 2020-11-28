@@ -10,7 +10,7 @@ public class NullMethodRequest extends MethodRequest{
     }
 
     /**
-     * 执行空请求
+     * execute empty request
      */
     @Override
     public void execute() {

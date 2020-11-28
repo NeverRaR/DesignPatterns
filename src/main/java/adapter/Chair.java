@@ -5,9 +5,9 @@ package adapter;
  */
 public class Chair {
     /**
-     * 人坐在椅子上
+     * person is sitting in chair
      * @param person
-     * 坐下的人
+     * person who sits
      */
     void sit(Adult person) {
         System.out.print("Chair:("+hashCode()+"):sit:");

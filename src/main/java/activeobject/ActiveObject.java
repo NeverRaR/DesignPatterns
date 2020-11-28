@@ -6,17 +6,17 @@ package activeobject;
 public interface ActiveObject {
 
     /**
-     * 解决投诉
+     * solve complaint
      * @param message
-     * 投诉信息
+     * message of complaint
      *
      * @return
-     * 解决结果
+     * result
      */
     Result solveEvent(String message);
 
     /**
-     * 结束主动对象
+     * end active object
      */
     void kill();
 }

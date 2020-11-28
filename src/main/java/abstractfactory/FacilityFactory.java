@@ -6,23 +6,23 @@ package abstractfactory;
 public interface FacilityFactory {
 
     /**
-     * 创建碰碰车
+     * create bumper car
      * @return
-     * 碰碰车
+     * bumper car
      */
     BumperCar createBumperCar();
 
     /**
-     * 创建过山车
+     * create roller coaster
      * @return
-     * 过山车
+     * roller coaster
      */
     RollerCoaster createRollerCoaster();
 
     /**
-     * 创建餐馆
+     * create restaurant
      * @return
-     * 餐馆
+     * restaurant
      */
     Restaurant createRestaurant();
 }

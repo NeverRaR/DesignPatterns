@@ -1,8 +1,9 @@
 package valueobject;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ValueObjectTest {
+public class ValueObjectTest extends TestCase {
 
     /**
      * Create three HeroStats and check equality between those

@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 class MembershipConverter extends Converter<MembershipDto, Membership> {
 

@@ -5,9 +5,9 @@ package activeobject;
  */
 public abstract class Result {
     /**
-     * 返回结果
+     * return result
      * @return
-     * 结果
+     * result
      */
     public abstract Object getResultValue();
 }

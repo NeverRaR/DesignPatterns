@@ -11,9 +11,9 @@ public class SchedulerThread extends Thread {
     }
 
     /**
-     * 发起方法调用
+     * create a function call
      * @param request
-     * 方法调用请求
+     * request for function call
      */
     public void invoke(MethodRequest request){
         if(isDead()) return;
@@ -21,12 +21,12 @@ public class SchedulerThread extends Thread {
     }
 
     /**
-     * 将SchedulerThread设置为已死亡
+     * set "SchedulerThread" dead
      */
-    public void setDead(){//主动对象停止接受请求
+    public void setDead(){//active object stops receiving request
         if(isDead()) return;
         this.dead=true;
-        queue.putRequest(new NullMethodRequest());//放入空请求唤醒线程
+        queue.putRequest(new NullMethodRequest());//put an empty request to wake up thread
     }
     public void run(){
         while(true){
@@ -40,9 +40,9 @@ public class SchedulerThread extends Thread {
 
     /**
      *
-     * 判断SchedulerThread是否死亡
+     * judge whether "SchedulerThread" is dead or not
      * @return
-     * 是否死亡
+     * dead or not
      */
     public boolean isDead() {
         return dead;

@@ -16,9 +16,9 @@ public class Adult {
     }
 
     /**
-     * 获得成年人身高
+     * get adult's height
      * @return
-     * 身高
+     * height
      */
     public double getAdultHeight() {
         return adultHeight;

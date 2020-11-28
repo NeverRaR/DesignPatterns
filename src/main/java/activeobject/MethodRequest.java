@@ -12,7 +12,7 @@ public abstract class MethodRequest {
     }
 
     /**
-     * 执行请求
+     * execute request
      */
     public abstract void execute();
 

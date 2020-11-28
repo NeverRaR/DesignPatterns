@@ -6,9 +6,9 @@ package activeobject;
 public class ActivationQueue {
     private static final int MAX_METHOD_REQUEST=100;
     private final MethodRequest[] requests;
-    private int tail;//下一个putRequest的地方
-    private int head;//下一个takeRequest的地方
-    private int count;//MethodRequest的数量
+    private int tail;//position of next putRequest
+    private int head;//position of next takeRequest
+    private int count;//count of MethodRequest
 
     public ActivationQueue(){
         this.requests =new MethodRequest[MAX_METHOD_REQUEST];
@@ -20,17 +20,17 @@ public class ActivationQueue {
     /**
      *
      * @return
-     * 队列是否为空
+     * whether the queue is empty or not
      */
     public synchronized boolean isEmpty(){
         return this.count==0;
     }
 
     /**
-     *向队列中放入新请求，如果超出上限则阻塞线程
+     * put a new request into the queue, and block the thread if the upper limit is exceeded
      *
      * @param request
-     * 新请求
+     * new request
      */
     public synchronized void putRequest(MethodRequest request){
         while(count>= requests.length){
@@ -48,9 +48,9 @@ public class ActivationQueue {
     }
 
     /**
-     * 从队列中取出请求，如果队列为空则阻塞线程
+     * take a request from the queue, and block the thread if the queue is empty
      * @return
-     * 返回请求
+     * request
      */
     public synchronized MethodRequest takeRequest(){
         while (count<=0){

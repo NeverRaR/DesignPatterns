@@ -6,16 +6,16 @@ package decorator;
 public interface VisitPackage {
 
     /**
-     * 获取套餐价格
+     * get the price of a visit package
      * @return
-     * 价格
+     * price
      */
     Double getPrice();
 
     /**
-     * 获取套餐内容
+     * get the content of a visit package
      * @return
-     * 内容
+     * content
      */
     String getContent();
 }
