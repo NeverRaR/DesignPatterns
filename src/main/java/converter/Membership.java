@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 import java.util.Objects;
 

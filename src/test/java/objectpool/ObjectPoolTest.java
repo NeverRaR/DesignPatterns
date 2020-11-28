@@ -1,15 +1,16 @@
 package objectpool;
 
+import junit.framework.TestCase;
 import objectpool.*;
 import org.junit.Test;
 
 /**
  * @author nemo
  */
-public class ObjectPoolTest {
+public class ObjectPoolTest extends TestCase {
 
     @Test
-    public void main() {
+    public void test() {
         System.out.println("Test object pool:");
         PolarizedGlassPool pool = new PolarizedGlassPool();
         System.out.println("Pool created.");

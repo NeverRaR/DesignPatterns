@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 import java.util.Collection;
 import java.util.List;

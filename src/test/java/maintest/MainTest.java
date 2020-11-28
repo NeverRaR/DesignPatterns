@@ -11,6 +11,7 @@ import builder.BuilderTest;
 import chainofresponsibility.ChainTest;
 import command.CommandTest;
 import composite.CompositeTest;
+import converter.ConverterTest;
 import dataaccessobject.DataAccessObjectTest;
 import decorator.DecoratorTest;
 import delegation.DelegationTest;
@@ -29,12 +30,14 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 import junit.framework.Test;
+import markerinterface.MarkerInterfaceTest;
 import mediator.MediatorTest;
 import memento.MementoTest;
 import monostate.BillboardTest;
 import multition.MultitionTest;
 import nullobject.NullObjectTest;
 import objectmother.FacilitiesObjectMotherTest;
+import objectpool.ObjectPoolTest;
 import observer.ObserverTest;
 import pipeline.PipelineTest;
 import prototype.PrototypeTest;
@@ -48,6 +51,7 @@ import strategy.ExperiencedTouristTest;
 import templatemethod.TemplateMethodTest;
 import threadpool.ThreadPoolTest;
 import transferObject.TransferObjectTest;
+import valueobject.ValueObjectTest;
 import visitor.VisitorTest;
 
 public class MainTest  {
@@ -103,6 +107,10 @@ public class MainTest  {
         suite.addTestSuite(ThreadPoolTest.class);
         suite.addTestSuite(TransferObjectTest.class);
         suite.addTestSuite(VisitorTest.class);
+        suite.addTestSuite(ValueObjectTest.class);
+        suite.addTestSuite(ConverterTest.class);
+        suite.addTestSuite(ObjectPoolTest.class);
+        suite.addTestSuite(MarkerInterfaceTest.class);
         return suite;
     }
 }

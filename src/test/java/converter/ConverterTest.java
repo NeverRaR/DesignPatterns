@@ -1,8 +1,9 @@
-package Converter;
+package converter;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class ConverterTest {
+public class ConverterTest extends TestCase {
     @Test
     public void test(){
 
