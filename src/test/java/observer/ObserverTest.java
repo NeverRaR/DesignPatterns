@@ -22,5 +22,6 @@ public class ObserverTest extends TestCase {
         EntranceEmployee entranceEmployee2 = new EntranceEmployee(peopleNum, 200);
         peopleNum.setVal(90);
         peopleNum.setVal(120);
+        peopleNum.setVal(210);
     }
 }

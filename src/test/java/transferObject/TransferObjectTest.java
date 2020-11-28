@@ -17,7 +17,7 @@ public class TransferObjectTest extends TestCase {
 
         // output all the users
         for(UserVO user:userBusinessObject.getAllUsers()) {
-            System.out.println("user: [ID: "+user.getUserId()+", Name: "+user.getName()+"]");
+            System.out.println("[TransferObjectTest:test]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"]");
         }
 
         // update user
@@ -27,7 +27,7 @@ public class TransferObjectTest extends TestCase {
 
         // get user
         user = userBusinessObject.getUser(1);
-        System.out.println("user: [ID: "+user.getUserId()+", Name: "+user.getName()+"]");
+        System.out.println("[TransferObjectTest:test]: user: [ID: "+user.getUserId()+", Name: "+user.getName()+"]");
         userBusinessObject.deleteUser(user);
     }
 

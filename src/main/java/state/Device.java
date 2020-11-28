@@ -27,7 +27,6 @@ public class Device {
     /**
      * Do use.
      */
-// use this device
     public void doUse(){
         state.doUse(this);
     }
@@ -35,7 +34,6 @@ public class Device {
     /**
      * Turn on.
      */
-// turn on this device
     public void doOn(){
         state.doOn(this);
     }
@@ -43,7 +41,6 @@ public class Device {
     /**
      * Turn off.
      */
-// turn off this device
     public void doOff(){
         state.doOff(this);
     }
@@ -51,7 +48,6 @@ public class Device {
     /**
      * Break down.
      */
-// break down this device
     public void doDown(){
         state.doDown(this);
     }
@@ -59,7 +55,6 @@ public class Device {
     /**
      * Do fix.
      */
-// fix this device
     public void doFix(){
         state.doFix(this);
     }

@@ -45,7 +45,7 @@ public class EntranceEmployee extends NumObserver{
      * Limit people num.
      */
     public void limitNum(){
-        System.out.print("Num of People is over " + tolerance + " now! ");
+        System.out.print("[EntranceEmployee:" + toString() + ":limitNum]: Num of People is over " + tolerance + " now! ");
         System.out.println("Start limit users crowding.");
     }
 }
