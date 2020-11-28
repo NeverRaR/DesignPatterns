@@ -26,9 +26,10 @@ import futurepromise.FuturePromiseTest;
 import immutable.ImmutableTest;
 import interpreter.InterpreterTest;
 import iterator.TouristTest;
+import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
-import junit.framework.Test;
 import markerinterface.MarkerInterfaceTest;
 import mediator.MediatorTest;
 import memento.MementoTest;
@@ -54,7 +55,7 @@ import transferObject.TransferObjectTest;
 import valueobject.ValueObjectTest;
 import visitor.VisitorTest;
 
-public class MainTest  {
+public class MainTest extends TestCase {
 
     public static void main(String[] args) {
         TestRunner.run(getAllTest());
@@ -113,5 +114,8 @@ public class MainTest  {
         suite.addTestSuite(MarkerInterfaceTest.class);
         suite.addTestSuite(MvcTest.class);
         return suite;
+    }
+    public void test(){
+
     }
 }
