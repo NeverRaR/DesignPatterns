@@ -15,11 +15,11 @@ public class Command {
         //when the state of protective props is down
         if(up == false) {
             up = true;
-            System.out.println("Command: putUp: The protective props has been put up");
+            System.out.println("Command: (" + hashCode() + "): putUp: The protective props has been put up");
         }
         //when the state of protective props is up
         else {
-            System.out.println("Command: putUp: The protective props cannot be put up as it has already been put up");
+            System.out.println("Command: (" + hashCode() + "): putUp: The protective props cannot be put up as it has already been put up");
         }
     }
 
@@ -30,11 +30,11 @@ public class Command {
         //when the state of protective props is up
         if(up == true) {
             up = false;
-            System.out.println("Command: putDown: The protective props has been put down");
+            System.out.println("Command: (" + hashCode() + "): putDown: The protective props has been put down");
         }
         //when the state of protective props is down
         else {
-            System.out.println("Command: putDown: The protective props cannot be put down as it has already been put down");
+            System.out.println("Command: (" + hashCode() + "): putDown: The protective props cannot be put down as it has already been put down");
         }
     }
 }

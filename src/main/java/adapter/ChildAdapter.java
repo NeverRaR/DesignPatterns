@@ -13,9 +13,9 @@ public class ChildAdapter extends Adult{
     }
 
     /**
-     * 将孩子身高转化为加高后的身高
+     * convert child's height into new height
      * @return
-     * 转化后身高
+     * new height
      */
     @Override
     public double getAdultHeight() {

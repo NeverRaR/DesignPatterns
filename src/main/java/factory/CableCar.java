@@ -10,6 +10,6 @@ public class CableCar implements Facility {
      * let cable car be built
      */
     public void build() {
-        System.out.println("CableCar: build: Cable car is under construction");
+        System.out.println("CableCar: (" + hashCode() + "): build: Cable car is under construction");
     }
 }

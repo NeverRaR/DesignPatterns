@@ -20,8 +20,8 @@ public class CustomerThread extends Thread{
             for(i=0;i<30;++i){
                 double extraDish=ThreadLocalRandom.current().nextDouble(200);
                 bill.addDish(extraDish);
-                sleep(ThreadLocalRandom.current().nextInt(1000));//进餐或者思考
-                bill.order();//顾客主动要求点单
+                sleep(ThreadLocalRandom.current().nextInt(1000));//having a meal or thinking
+                bill.order();//customers take the initiative to order
             }
         }
         catch (Exception e){

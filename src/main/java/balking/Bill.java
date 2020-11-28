@@ -8,34 +8,34 @@ public class Bill {
     private double curPrice;
     private double totalPrice;
     public Bill(){
-        this.ordered=true;//初始状态没有需要下单的餐品
+        this.ordered=true;//in the initial state, there is no meal to order
         this.curPrice=0;
         this.totalPrice=0;
     }
 
     /**
-     * 账单中新增菜品,并设置标记
+     * Add dish to the bill and set a mark
      * @param curPrice
-     * 新增菜品价格
+     * price of new dish
      */
     public synchronized void addDish(double curPrice){
         this.curPrice+=curPrice;
-        ordered=false;//新增菜品还未下单
+        ordered=false;//new dish has not been ordered
     }
 
     /**
-     * 试图点单
+     * try to order
      */
-    public synchronized void order(){//下单
+    public synchronized void order(){//order
         if(ordered){
-            return;//如果已下单则忽略
+            return;//ignore if has ordered
         }
         doOrder();
         ordered=true;
     }
 
     /**
-     * 真正下单
+     * order truly
      */
     private void doOrder(){
         totalPrice+=curPrice;
