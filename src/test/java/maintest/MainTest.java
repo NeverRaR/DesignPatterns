@@ -26,7 +26,6 @@ import futurepromise.FuturePromiseTest;
 import immutable.ImmutableTest;
 import interpreter.InterpreterTest;
 import iterator.TouristTest;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import junit.textui.TestRunner;
 import junit.framework.Test;
@@ -35,6 +34,7 @@ import mediator.MediatorTest;
 import memento.MementoTest;
 import monostate.BillboardTest;
 import multition.MultitionTest;
+import mvc.MvcTest;
 import nullobject.NullObjectTest;
 import objectmother.FacilitiesObjectMotherTest;
 import objectpool.ObjectPoolTest;
@@ -111,6 +111,7 @@ public class MainTest  {
         suite.addTestSuite(ConverterTest.class);
         suite.addTestSuite(ObjectPoolTest.class);
         suite.addTestSuite(MarkerInterfaceTest.class);
+        suite.addTestSuite(MvcTest.class);
         return suite;
     }
 }

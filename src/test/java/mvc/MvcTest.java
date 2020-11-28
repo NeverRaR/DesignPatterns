@@ -1,8 +1,9 @@
 package mvc;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
-public class mvcTest {
+public class MvcTest extends TestCase {
     @Test
     public void test(){
         UserReview model = retrieveReviewFromDatabase();
